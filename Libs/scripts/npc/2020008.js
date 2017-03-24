@@ -91,11 +91,7 @@ function action(mode, type, selection) {
 				}
 				if (cm.getQuestStatus(100102) == 2 ) { //完成
 					cm.sendNext("#rBy Odin's ring!#k 你現在可以變得更強.");
-				} else if (cm.getQuestStatus(100102) == 1 ) {
-				if (cm.haveItem(4031058)) {
-					cm.completeQuest(100102);
-					cm.dispose();
-				}else { //開始
+				} else if (cm.getQuestStatus(100102) == 1 ) { //開始
 					cm.sendOk("拿著黑暗水晶，在冰原雪域內找到#r雪原聖地#k，且發現裡面的神聖石頭。");
 					cm.dispose();
 				}
