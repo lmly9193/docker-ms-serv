@@ -94,7 +94,6 @@ function action(mode, type, selection) {
 				} else if (cm.getQuestStatus(100102) == 1 ) {
 				if (cm.haveItem(4031058)) {
 					cm.completeQuest(100102);
-					cm.sendOK("看來你已經拿到智慧項鍊了，你已經可以轉職了");
 					cm.dispose();
 				}else { //開始
 					cm.sendOk("在冰原雪域內找到#r雪原聖地#k，且發現裡面的神聖石頭");
