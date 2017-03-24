@@ -53,11 +53,9 @@ function action(mode, type, selection) {
 	    } else if (cm.getQuestStatus(100100) == 1) {
 		cm.completeQuest(100101);
 		if (cm.getQuestStatus(100101) == 2) {
-			if (cm.haveItem(4031059)) {
 			cm.gainItem(4031059,-1);
 		    cm.sendOk("看來你已經證明了你自己，把這個交給#b泰勒斯#k。");
 		    cm.gainItem(4031057,1);
-		}
 		} else {
 		    cm.sendOk("#b#h0##k! 如果你要獲得我的認同，就得去異界打倒我的分身取得#b黑符#k，證明你自己。在通往古老的路上，存在著次元裂縫，它將可以帶你到異界。");
 		    cm.startQuest(100101);
