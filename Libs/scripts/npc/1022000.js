@@ -56,7 +56,6 @@ function action(mode, type, selection) {
 			cm.gainItem(4031059,-1);
 			cm.gainItem(4031057,1);
 		    cm.sendOk("看來你已經證明了你自己，你可以把#b力量項鍊#k交給#b泰勒斯#k。");
-		    cm.warp(211000001);
 		} else {
 		    cm.startQuest(100101);
 		    cm.sendOk("#b#h0##k! 如果你要獲得#b力量項鍊#k，那你必須得到我的認同，去異界打倒我的分身取得#b黑符#k，證明你自己。在通往古老路上的火獨眼獸洞窟有次元裂縫，它將可以帶你到異界。");
@@ -76,7 +75,8 @@ function action(mode, type, selection) {
 	    cm.resetStats(35, 4, 4, 4);
 	    cm.expandInventory(1, 4);
 	    cm.expandInventory(4, 4);
-	    cm.changeJob(100); // WARRIOR
+	    cm.changeJob(100);
+	    cm.getPlayer().gainAp(5); // WARRIOR
 	}
 	cm.gainItem(1402001, 1);
 	cm.sendOk("繼續前進吧!勇士...");
@@ -107,6 +107,7 @@ function action(mode, type, selection) {
 	cm.sendYesNo("你確定想成為一位#r" + jobName + "#k?");
     } else if (status == 23) {
 	cm.changeJob(job);
+	cm.getPlayer().gainAp(10);
 	cm.gainItem(4031012, -1);
 	cm.sendOk("繼續前進吧!勇士...");
 	cm.dispose();
