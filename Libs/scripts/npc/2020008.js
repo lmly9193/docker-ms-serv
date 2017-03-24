@@ -107,10 +107,29 @@ function action(mode, type, selection) {
 				}
 			}
 		} else if (status == 1) {
-			if (cm.haveItem(4031058)) { //完成
-				cm.changeJob(cm.getPlayer().getJob() + 1);
-				cm.sendOk("你變得更加強大了!");
-				cm.dispose();
+			if (cm.haveItem(4031058, 1)) {
+                if (cm.getJobId()==110) {
+                    cm.changeJobById(111);
+                    //cm.getPlayer().gainAp(5);
+					cm.gainItem(4031057, -1);
+					cm.gainItem(4031058, -1);
+					cm.sendOk("恭喜轉職了!");
+                    cm.dispose();
+                } else if (cm.getJobId()==120) {
+                    cm.changeJobById(121);
+                    //cm.getPlayer().gainAp(5);
+					cm.gainItem(4031057, -1);
+					cm.gainItem(4031058, -1);
+					cm.sendOk("恭喜轉職了!");
+                    cm.dispose();
+                } else if (cm.getJobId()==130) {
+                    cm.changeJobById(131);
+                    //cm.getPlayer().gainAp(5);
+					cm.gainItem(4031057, -1);
+					cm.gainItem(4031058, -1);
+					cm.sendOk("恭喜轉職了!");
+                    cm.dispose();
+                }
 			} else if (cm.getQuestStatus(100101) == 2) { //完成
 				if(cm.haveItem(4031057)){
 					cm.sendAcceptDecline("確定好要做最終測驗了?");
