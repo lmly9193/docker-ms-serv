@@ -91,9 +91,15 @@ function action(mode, type, selection) {
 				}
 				if (cm.getQuestStatus(100102) == 2 ) { //完成
 					cm.sendNext("#rBy Odin's ring!#k 你現在可以變得更強.");
-				} else if (cm.getQuestStatus(100102) == 1 ) { //開始
+				} else if (cm.getQuestStatus(100102) == 1 ) {
+				if (cm.haveItem(4031058)) {
+					cm.completeQuest(100102);
+					cm.sendOK("看來你已經拿到智慧項鍊了，你已經可以轉職了");
+					cm.dispose();
+				}else { //開始
 					cm.sendOk("在冰原雪域內找到#r雪原聖地#k，且發現裡面的神聖石頭");
 					cm.dispose();
+				}
 				} else if (cm.getQuestStatus(100101) == 2) { //完成
 					cm.sendNext("#rBy Odin's raven!#k 你確實很優秀");
 				} else if (cm.getQuestStatus(100100) == 1 ) { // 開始
@@ -107,29 +113,10 @@ function action(mode, type, selection) {
 				}
 			}
 		} else if (status == 1) {
-			if (cm.haveItem(4031058, 1)) {
-                if (cm.getJobId()==110) {
-                    cm.changeJobById(111);
-                    //cm.getPlayer().gainAp(5);
-					cm.gainItem(4031057, -1);
-					cm.gainItem(4031058, -1);
-					cm.sendOk("恭喜轉職了!");
-                    cm.dispose();
-                } else if (cm.getJobId()==120) {
-                    cm.changeJobById(121);
-                    //cm.getPlayer().gainAp(5);
-					cm.gainItem(4031057, -1);
-					cm.gainItem(4031058, -1);
-					cm.sendOk("恭喜轉職了!");
-                    cm.dispose();
-                } else if (cm.getJobId()==130) {
-                    cm.changeJobById(131);
-                    //cm.getPlayer().gainAp(5);
-					cm.gainItem(4031057, -1);
-					cm.gainItem(4031058, -1);
-					cm.sendOk("恭喜轉職了!");
-                    cm.dispose();
-                }
+			if (cm.getQuestStatus(100102) == 2) { //完成
+				cm.changeJob(cm.getPlayer().getJob() + 1);
+				cm.sendOk("你變得更加強大了!");
+				cm.dispose();
 			} else if (cm.getQuestStatus(100101) == 2) { //完成
 				if(cm.haveItem(4031057)){
 					cm.sendAcceptDecline("確定好要做最終測驗了?");
@@ -148,7 +135,7 @@ function action(mode, type, selection) {
 					cm.sendOk("發現#r雪原聖地#k隱藏的的神聖石頭並且帶回#b智慧項鍊#k");
 					cm.dispose();
 				}else{
-					cm.sendOk("你沒有#b智慧項鍊#k");
+					cm.sendOk("你沒有#b力量項鍊#k");
 					cm.dispose();
 				}
 			} else {
