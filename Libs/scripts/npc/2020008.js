@@ -55,15 +55,15 @@ function action(mode, type, selection) {
 							if (prop == null || prop.equals("0")) {
 								ddz.startInstance(cm.getParty(), cm.getMap());
 							} else {
-							cm.sendOk("已經有人在保護泰勒斯了，請稍後在試!");
+							cm.sendOk("Someone else is already trying to protect Tylus, please try again in a bit.");
 							}
 						}
 					} else {
-						cm.sendOk("請組隊保護泰勒斯！");
+						cm.sendOk("Please form a party in order to protect Tylus!");
 					}
 					cm.dispose();
 				} else if (cm.getQuestStatus(6192) == 2) {
-					cm.sendOk("你已經保護我了，謝謝! 我會教你技巧的=)");
+					cm.sendOk("You have protected me. Thank you. I will teach you stance skill.");
 					if (cm.getPlayer().getJob() == 112) {
 						if (cm.getPlayer().getMasterLevel(1121002) <= 0) {
 							cm.teachSkill(1121002, 0, 10);
@@ -92,7 +92,7 @@ function action(mode, type, selection) {
 				if (cm.getQuestStatus(100102) == 2 ) { //完成
 					cm.sendNext("#rBy Odin's ring!#k 你現在可以變得更強.");
 				} else if (cm.getQuestStatus(100102) == 1 ) { //開始
-					cm.sendOk("拿著黑暗水晶，在冰原雪域內找到#r雪原聖地#k，且發現裡面的神聖石頭。");
+					cm.sendOk("在冰原雪域內找到#r雪原聖地#k，且發現裡面的神聖石頭");
 					cm.dispose();
 				} else if (cm.getQuestStatus(100101) == 2) { //完成
 					cm.sendNext("#rBy Odin's raven!#k 你確實很優秀");
