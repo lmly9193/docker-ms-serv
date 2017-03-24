@@ -3,24 +3,25 @@
     Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
 		       Matthias Butz <matze@odinms.de>
 		       Jan Christian Meyer <vimes@odinms.de>
-
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
     published by the Free Software Foundation version 3 as published by
     the Free Software Foundation. You may not use, modify or distribute
     this program under any other version of the GNU Affero General Public
     License.
-
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Affero General Public License for more details.
-
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-importPackage(Packages.client);
-importPackage(Packages.server.quest);
+//BY MOOGRA
+/* Robeira
+	Magician 3rd job advancement
+	El Nath: Chief's Residence (211000001)
+	Custom Quest 100100, 100102
+*/
 
 var status = 0;
 var job;
@@ -35,7 +36,7 @@ function action(mode, type, selection) {
         cm.dispose();
     } else {
         if (mode == 0 && status == 1) {
-            cm.sendOk("請重新對話.");
+            cm.sendOk("等您下定決心再次找我吧.");
             cm.dispose();
             return;
         }
@@ -44,100 +45,65 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-			if (!(cm.getPlayer().getJob() == 110 || cm.getPlayer().getJob() == 120 || cm.getPlayer().getJob() == 130 || cm.getJob() == 2110)) {
-				if (cm.getQuestStatus(6192) == 1) {
-					if (cm.getParty() != null) {
-						var ddz = cm.getEventManager("ProtectTylus");
-						if (ddz == null) {
-							cm.sendOk("Unknown error occured");
-						} else {
-							var prop = ddz.getProperty("state");
-							if (prop == null || prop.equals("0")) {
-								ddz.startInstance(cm.getParty(), cm.getMap());
-							} else {
-							cm.sendOk("Someone else is already trying to protect Tylus, please try again in a bit.");
-							}
-						}
-					} else {
-						cm.sendOk("Please form a party in order to protect Tylus!");
-					}
-					cm.dispose();
-				} else if (cm.getQuestStatus(6192) == 2) {
-					cm.sendOk("You have protected me. Thank you. I will teach you stance skill.");
-					if (cm.getPlayer().getJob() == 112) {
-						if (cm.getPlayer().getMasterLevel(1121002) <= 0) {
-							cm.teachSkill(1121002, 0, 10);
-						}
-					} else if (cm.getPlayer().getJob() == 122) {
-						if (cm.getPlayer().getMasterLevel(1221002) <= 0) {
-							cm.teachSkill(1221002, 0, 10);
-						}
-					} else if (cm.getPlayer().getJob() == 132) {
-						if (cm.getPlayer().getMasterLevel(1321002) <= 0) {
-							cm.teachSkill(1321002, 0, 10);
-						}
-					}
-					cm.dispose();
-				} else{
-					cm.sendOk("#rOdin#k與你同在!");
-					cm.dispose();
-					return;
-				}
-			}else{
-				if ((cm.getPlayer().getJob() >= 200 && cm.getJob() != 2110) || cm.getPlayer().getJob() % 10 != 0) {
-					cm.sendOk("#rOdin#k與你同在!");
-					cm.dispose();
-					return;
-				}
-				if (cm.getQuestStatus(100102) == 2 ) { //完成
-					cm.sendNext("#rBy Odin's ring!#k 你現在可以變得更強.");
-				} else if (cm.getQuestStatus(100102) == 1 ) { //開始
-					cm.sendOk("在冰原雪域內找到#r雪原聖地#k，且發現裡面的神聖石頭");
-					cm.dispose();
-				} else if (cm.getQuestStatus(100101) == 2) { //完成
-					cm.sendNext("#rBy Odin's raven!#k 你確實很優秀");
-				} else if (cm.getQuestStatus(100100) == 1 ) { // 開始
-					cm.sendOk("現在，回去找#b武術教練#k. 他會幫助你.");
-					cm.dispose();
-				} else if (cm.getPlayer().getJob() < 200 && cm.getPlayer().getJob() % 10 == 0 && cm.getPlayer().getLevel() >= 70) {
-					cm.sendNext("#rBy Odin's beard!#k你很強悍.");
-				} else {
-					cm.sendOk("還不是時候...");
-					cm.dispose();
-				}
-			}
-		} else if (status == 1) {
-			if (cm.getQuestStatus(100102) == 2) { //完成
-				cm.changeJob(cm.getPlayer().getJob() + 1);
-				cm.sendOk("你變得更加強大了!");
-				cm.dispose();
-			} else if (cm.getQuestStatus(100101) == 2) { //完成
-				if(cm.haveItem(4031057)){
-					cm.sendAcceptDecline("確定好要做最終測驗了?");
-				}else{
-					cm.sendOk("你沒有#b力量項鍊#k");
-					cm.dispose();
-				}
-			} else {
-				cm.sendAcceptDecline("但是我還可以讓你更強，你想要接受挑戰嗎?");
-			}
-		} else if (status == 2) {
-			if (cm.getQuestStatus(100101) == 2) { //完成
-				if(cm.haveItem(4031057)){
-					cm.startQuest(100102);
-					cm.gainItem(4031057,-1)
-					cm.gainItem(4005004,1)
-					cm.sendOk("發現#r雪原聖地#k隱藏的的神聖石頭並且帶回#b智慧項鍊#k，而你應該需要附有黑暗力量的神祕水晶，#b黑暗水晶#k");
-					cm.dispose();
-				}else{
-					cm.sendOk("你沒有#b力量項鍊#k");
-					cm.dispose();
-				}
-			} else {
-				cm.startQuest(100100);
-				cm.sendOk("回去找#b武術教練#k.他會幫助你.");
-				cm.dispose();
-			}
+		if ((cm.getJobId() == 111 || cm.getJobId() == 121 || cm.getJobId() == 131 || cm.getJobId() == 112 || cm.getJobId() == 122 || cm.getJobId() == 132)) {	
+	    cm.sendOk("您屬於劍士部,但是您已經成功三轉了,已經超越了教官的強度了!");
+	    cm.dispose();
+	    return;
 		}
+            if (!(cm.getJobId()==110 ||cm.getJobId()==120||cm.getJobId()==130)) {
+		cm.sendOk("請找您的轉職教官,您不屬於劍士部的滾吧!");
+                cm.dispose();
+                return;
+			} else if (cm.getPlayer().getLevel() < 70) {
+				cm.sendOk("你的等級尚未滿70等");
+				cm.dispose();
+				return;		
+            }	
+			if (cm.haveItem(4031057, 1)){
+                cm.sendNext("恭喜你到達這裡,最後我將給你一個考驗!");			
+            } else if (!(cm.haveItem(4031057,1))) {
+				cm.warp(102000003);
+                cm.sendOk("去找 #r劍士轉職官#k 他會幫助你的!");
+                cm.dispose();
+            } else if (cm.getPlayer().getRemainingSp() <= (cm.getLevel() - 70) * 3) {
+                cm.sendNext("你的技能點數還沒點完..");
+		} else {
+                cm.sendOk("你還不能轉職...");
+                cm.dispose();
+            }
+        } else if (status == 1) {
+            if (cm.haveItem(4031058, 1)) {
+                if (cm.getJobId()==110) {
+                    cm.changeJobById(111);
+                    //cm.getPlayer().gainAp(5);
+					cm.gainItem(4031057, -1);
+					cm.gainItem(4031058, -1);
+					cm.sendOk("恭喜轉職了!");
+                    cm.dispose();
+                } else if (cm.getJobId()==120) {
+                    cm.changeJobById(121);
+                    //cm.getPlayer().gainAp(5);
+					cm.gainItem(4031057, -1);
+					cm.gainItem(4031058, -1);
+					cm.sendOk("恭喜轉職了!");
+                    cm.dispose();
+                } else if (cm.getJobId()==130) {
+                    cm.changeJobById(131);
+                    //cm.getPlayer().gainAp(5);
+					cm.gainItem(4031057, -1);
+					cm.gainItem(4031058, -1);
+					cm.sendOk("恭喜轉職了!");
+                    cm.dispose();
+                }
+            } else if (cm.haveItem(4031057, 1))
+                cm.sendAcceptDecline("你準備承擔最終測試??");
+            else
+                cm.sendAcceptDecline("但是，我可以讓你更加強大。雖然你必須證明不僅是你的實力，但你的知識。你準備好挑戰了嗎？");
+        } else if (status == 2) {
+            if (cm.haveItem(4031057, 1)) {
+                cm.sendOk("去找神聖的石頭測驗吧!!.");
+                cm.dispose();
+            }
+        }
     }
-}	
+}
