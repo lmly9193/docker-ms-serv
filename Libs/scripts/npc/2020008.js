@@ -129,7 +129,7 @@ function action(mode, type, selection) {
 					cm.sendOk("發現#r雪原聖地#k隱藏的的神聖石頭並且帶回#b智慧項鍊#k，而你應該需要附有黑暗力量的神祕水晶，#b黑暗水晶#k");
 					cm.dispose();
 				}else{
-					cm.sendOk("你沒有#b智慧項鍊#k");
+					cm.sendOk("你沒有#b力量項鍊#k");
 					cm.dispose();
 				}
 			} else {
