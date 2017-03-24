@@ -94,7 +94,6 @@ function action(mode, type, selection) {
 				} else if (cm.getQuestStatus(100102) == 1 ) { //開始
 					cm.sendOk("拿著黑暗水晶，在冰原雪域內找到#r雪原聖地#k，且發現裡面的神聖石頭。");
 					cm.dispose();
-				}
 				} else if (cm.getQuestStatus(100101) == 2) { //完成
 					cm.sendNext("#rBy Odin's raven!#k 你確實很優秀");
 				} else if (cm.getQuestStatus(100100) == 1 ) { // 開始
