@@ -52,6 +52,7 @@ function action(mode, type, selection) {
 		}
 	    } else if (cm.getQuestStatus(100100) == 1) {
 		if (cm.haveItem(4031059)) {
+			cm.completeQuest(100100);
 			cm.completeQuest(100101);
 			cm.gainItem(4031059,-1);
 			cm.gainItem(4031057,1);
