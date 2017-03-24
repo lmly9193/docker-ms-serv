@@ -50,7 +50,7 @@ function action(mode, type, selection) {
 		    status = 10;
 		    cm.sendNext("看來你越來越強了!");
 		}
-	    } else if (cm.getQuestStatus(100100) == 1) {
+	    } else if (cm.getQuestStatus(100100) == 1 && !cm.haveItem(4031059) ) {
 		cm.completeQuest(100101);
 		if (cm.getQuestStatus(100101) == 2) {
 		    cm.sendOk("看來你已經證明了你自己，把這個交給#b泰勒斯#k。");
