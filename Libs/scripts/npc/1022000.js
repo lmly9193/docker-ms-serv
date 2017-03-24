@@ -57,7 +57,6 @@ function action(mode, type, selection) {
 		} else {
 		    cm.sendOk("#b#h0##k! 如果你要獲得我的認同，就得去異界打倒我的分身取得#b黑符#k，證明你自己。我將會把你傳送到通往古老路上的次元裂縫，它將可以帶你到異界。");
 		    cm.startQuest(100101);
-		    cm.warpParty(105070200,0);
 		}
 		cm.dispose();
 	    } else {
