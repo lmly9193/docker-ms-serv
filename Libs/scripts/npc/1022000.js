@@ -53,8 +53,8 @@ function action(mode, type, selection) {
 	    } else if (cm.getQuestStatus(100100) == 1 && cm.getPlayerStat("LVL") >= 70) {
 		if (cm.haveItem(4031059)) {
 			cm.completeQuest(100101);
-			cm.getItem(4031059,-1);
-			cm.getItem(4031057,1);
+			cm.gainItem(4031059,-1);
+			cm.gainItem(4031057,1);
 		    cm.sendOk("看來你已經證明了你自己，你可以把#b力量項鍊#k交給#b泰勒斯#k。");
 		    cm.warp(211000001);
 		} else {
