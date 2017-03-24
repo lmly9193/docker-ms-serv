@@ -50,17 +50,20 @@ function action(mode, type, selection) {
 		    status = 10;
 		    cm.sendNext("看來你越來越強了!");
 		}
-	    } else if (cm.getQuestStatus(100100) == 1 ) {
+	    } else if (cm.getQuestStatus(100100) == 1 && cm.getPlayerStat("LVL") >= 70) {
 		if (cm.haveItem(4031059)) {
 			cm.completeQuest(100101);
-		    cm.sendOk("看來你已經證明了你自己，把這個交給#b泰勒斯#k。");
+			cm.getItem(4031059,-1);
+			cm.getItem(4031057,1);
+		    cm.sendOk("看來你已經證明了你自己，你可以把#b力量項鍊#k交給#b泰勒斯#k。");
+		    cm.warp(211000001);
 		} else {
 		    cm.startQuest(100101);
-		    cm.sendOk("#b#h0##k! 如果你要獲得我的認同，就得去異界打倒我的分身取得#b黑符#k，證明你自己。我將會把你傳送到通往古老路上的次元裂縫，它將可以帶你到異界。");
+		    cm.sendOk("#b#h0##k! 如果你要獲得#b力量項鍊#k，那你必須得到我的認同，去異界打倒我的分身取得#b黑符#k，證明你自己。在通往古老路上的火獨眼獸洞窟有次元裂縫，它將可以帶你到異界。");
 		}
 		cm.dispose();
 	    } else {
-		cm.sendOk("你有明智的選擇。");
+		cm.sendOk("你有更明智的選擇!");
 		cm.dispose();
 	    }
 	}
