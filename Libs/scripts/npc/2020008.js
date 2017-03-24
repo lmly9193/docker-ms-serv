@@ -117,6 +117,7 @@ function action(mode, type, selection) {
 				cm.sendOk("你變得更加強大了!");
 				cm.getPlayer().gainAp(20);
 				cm.gainItem(4031058,-1);
+				cm.completeQuest(100100);
 				cm.dispose();
 			} else if (cm.getQuestStatus(100101) == 2) { //完成
 				if(cm.haveItem(4031057)){
