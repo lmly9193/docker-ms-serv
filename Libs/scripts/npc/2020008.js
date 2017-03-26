@@ -110,7 +110,7 @@ function action(mode, type, selection) {
 			if (cm.getQuestStatus(100102) == 2) { //完成
 				cm.changeJob(cm.getPlayer().getJob() + 1);
 				cm.sendOk("你變得更加強大了!");
-				cm.getPlayer().gainAp(20);
+				cm.getPlayer().gainAp(15);
 				cm.gainItem(4031058,-1);
 				cm.dispose();
 			} else if (cm.getQuestStatus(100101) == 2) { //完成

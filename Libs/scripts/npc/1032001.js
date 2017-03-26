@@ -50,8 +50,11 @@ function action(mode, type, selection) {
 		    cm.sendNext("The progress you have made is astonishing.");
 		}
 	    } else if (cm.getQuestStatus(100100) == 1) {
-		cm.completeQuest(100101);
-		if (cm.getQuestStatus(100101) == 2) {
+		if (cm.haveItem(4031059)) {
+			cm.completeQuest(100100);
+			cm.completeQuest(100101);
+			cm.gainItem(4031059,-1);
+			cm.gainItem(4031057,1);
 		    cm.sendOk("Alright, now take this to #bRobeira#k.");
 		} else {
 		    cm.sendOk("Hey, #b#h0##k! I need a #bBlack Charm#k. Go and find the Door of Dimension.");
@@ -73,6 +76,7 @@ function action(mode, type, selection) {
 	    cm.expandInventory(1, 4);
 	    cm.expandInventory(4, 4);
 	    cm.changeJob(200); // MAGICIAN
+	    cm.getPlayer().gainAp(5);
 	}
 	cm.gainItem(1372005, 1);
 	cm.sendOk("So be it! Now go, and go with pride.");
@@ -104,6 +108,7 @@ function action(mode, type, selection) {
     } else if (status == 23) {
 	cm.changeJob(job);
 	cm.gainItem(4031012, -1);
+    cm.getPlayer().gainAp(10);
 	cm.sendOk("So be it! Now go, and go with pride.");
 	cm.dispose();
     }

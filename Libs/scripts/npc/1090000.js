@@ -121,6 +121,7 @@ function action(mode, type, selection) {
         else if (status == 3) {
             if (cm.getPlayer().getJob() == 0){
                 cm.changeJob(500);
+                cm.getPlayer().gainAp(5);
 				cm.sendOk("你現在是一位海盜了!掠奪天下!");
 			}else{
 				cm.sendOk("出錯了!");
@@ -141,10 +142,12 @@ function action(mode, type, selection) {
 			if(cm.getQuestStatus(2191) == 2 && cm.getPlayer().getJob() == 500 ){
 				cm.changeJob(510);
 				cm.sendOk("你現在一名#r打手#k了");
+				cm.getPlayer().gainAp(10);
 				cm.dispose();
 			}else if(cm.getQuestStatus(2192) == 2 && cm.getPlayer().getJob() == 500 ){
 				cm.changeJob(520);
 				cm.sendOk("你現在一名#r槍手#k了");
+				cm.getPlayer().gainAp(10);
 				cm.dispose();
 			}
 		}else if(status == 12){
