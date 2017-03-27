@@ -59,7 +59,6 @@ function action(mode, type, selection) {
         cm.sendYesNO("你確定要前往#b#m"740000000"##k?");
     }
     }
-}
 cm.dispose(); 
 	} else {	    
 	    if (status == 0) {
