@@ -17,7 +17,6 @@ function start() {
 	case 701000000://上海灘
 	case 740000000://西門
 	case 200000000://天空之城
-	case
 	    map = cm.getSavedLocation("WORLDTOUR");
 	    cm.sendSimple("在這裡玩的如何呢?想去別的地方繼續旅遊還是回到原來的地方呢? \n\r #b#L0#我還有那些選擇?#l \n\r #L1#我旅行完了,我要回去#m"+map+"##l");
 	    break;
