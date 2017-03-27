@@ -6,7 +6,7 @@
 
 var status = -1;
 var cost, sel;
-var togo1, togo2, togo3, togo4;
+var togo1, togo2, togo3;
 var map;
 var back = true;
 
@@ -73,7 +73,6 @@ function action(mode, type, selection) {
 			    togo1 = 500000000;
 			    togo2 = 800000000;
 			    togo3 = 740000000;
-			    togo4 = 200000000;
 			    break;
 		    }
 		    cm.sendSimple("·Q¥h­þ¸Ì©O? \n\r #b#L0##m"+togo1+"# (3,000 ·¬¹ô)#l \n\r #L1##m"+togo2+"# (3,000 ·¬¹ô)#l \n\r #L2##m"+togo3+"# (3,000 ·¬¹ô)#l");
