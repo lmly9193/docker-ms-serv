@@ -16,6 +16,8 @@ function start() {
 	case 500000000://泰國
 	case 701000000://上海灘
 	case 740000000://西門
+	case 200000000://天空之城
+	case 100000000://弓箭手村
 	    map = cm.getSavedLocation("WORLDTOUR");
 	    cm.sendSimple("在這裡玩的如何呢?想去別的地方繼續旅遊還是回到原來的地方呢? \n\r #b#L0#我還可以去哪邊?#l \n\r #L1#我旅行完了,我要回去#m"+map+"##l");
 	    break;
@@ -66,6 +68,12 @@ function action(mode, type, selection) {
 			    togo1 = 500000000;
 			    togo2 = 800000000;
 			    togo3 = 740000000;
+			    break;
+			case 100000000:
+			    togo1 = 500000000;
+			    togo2 = 800000000;
+			    togo3 = 740000000;
+			    togo4 = 200000000;
 			    break;
 		    }
 		    cm.sendSimple("想去哪裡呢? \n\r #b#L0##m"+togo1+"# (3,000 楓幣)#l \n\r #L1##m"+togo2+"# (3,000 楓幣)#l \n\r #L2##m"+togo3+"# (3,000 楓幣)#l");
