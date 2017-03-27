@@ -61,13 +61,11 @@ function action(mode, type, selection) {
 		    cm.gainMeso(-cost);
 		    cm.saveLocation("WORLDTOUR");
 		    cm.warp(800000000, 0);
-		    cm.dispose();
 		}else if (selection == 1) {
 		    cm.gainMeso(-cost);
 		    cm.saveLocation("WORLDTOUR");
 		    cm.warp(500000000, 0);
-		    cm.dispose();
-		}
+		}cm.dispose();
 	    }
 	} else {	    
 	    if (status == 0) {
