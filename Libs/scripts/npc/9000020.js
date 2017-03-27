@@ -48,14 +48,14 @@ function action(mode, type, selection) {
 	if (!back) {
 	    if (status == 0) {
 		cm.sendSimple("我們目前有提供到\r\n#L0##b#m800000000\r\n#L1##b#m500000000\r\n#L2##b#m701000000\r\n#L3##b#m740000000");
-        } else if (status == 1) {// 每當跳往下一個對話框時 status 會增加 1
-        if (selection == 0) { // 選擇為是 (L0)
+        } else if (status == 1) {
+        if (selection == 0) {
         cm.sendYesNO("你確定要前往#b#m"800000000"##k?");
-        else if (selection == 1)
+        }else if (selection == 1){
         cm.sendYesNO("你確定要前往#b#m"500000000"##k?");
-        else if (selection == 2)
+        }else if (selection == 2){
         cm.sendYesNO("你確定要前往#b#m"701000000"##k?");
-        else if (selection == 3)
+        }else if (selection == 3){
         cm.sendYesNO("你確定要前往#b#m"740000000"##k?");
     }
     }
