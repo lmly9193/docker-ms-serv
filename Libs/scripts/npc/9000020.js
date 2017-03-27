@@ -6,16 +6,16 @@
 
 var status = -1;
 var cost, sel;
-var togo1, togo2, togo3;
+var togo1, togo2, togo3, togo4;
 var map;
 var back = true;
 
 function start() {
     switch (cm.getMapId()) {
-	case 800000000:
-	case 500000000:
-	case 701000000:
-	case 740000000:
+	case 800000000://日本神社
+	case 500000000://泰國
+	case 701000000://上海灘
+	case 740000000://西門
 	    map = cm.getSavedLocation("WORLDTOUR");
 	    cm.sendSimple("在這裡玩的如何呢?想去別的地方繼續旅遊還是回到原來的地方呢? \n\r #b#L0#我還可以去哪邊?#l \n\r #L1#我旅行完了,我要回去#m"+map+"##l");
 	    break;
@@ -44,25 +44,7 @@ function action(mode, type, selection) {
 	    status++;
 	else
 	    status--;
-
-	if (!back) {
-	    if (status == 0) {
-		cm.sendSimple("我們目前只有提供到\r\n#L0##b#m500000000");
-	    } else if (status == 1) {
-		cm.sendYesNo("日本古代神社充滿者有趣的氣息，請問你是否要前往?");
-	    /*} else if (status == 2) {
-		cm.sendNext("Check out the female shaman serving the Mushroom God, and I strongly recommend trying Takoyaki, Yakisoba, and other delicious food sold in the streets of Japan. Now, let's head over to #bMushroom Shrine#k, a mythical place if there ever was one.");*/
-	    } else if (status == 2) {
-		if (cm.getMeso() < cost) {
-		    cm.sendPrev("不好意思你的金錢不夠喔");
-		} else {
-		    cm.gainMeso(-cost);
-		    cm.saveLocation("WORLDTOUR");
-		    cm.warp(800000000, 0);
-		    cm.dispose();
-		}
-	    }
-	} else {	    
+		    
 	    if (status == 0) {
 		if (selection == 0) {
 		    switch (cm.getMapId()) {
@@ -92,7 +74,6 @@ function action(mode, type, selection) {
 		    cm.warp(map == -1 ? 100000000 : map);
 		    cm.clearSavedLocation("WORLDTOUR");
 		    cm.dispose();
-		}
 	    } else if (status == 1) {
 		sel = selection;
 		if (sel == 0) {
