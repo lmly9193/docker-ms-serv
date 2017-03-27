@@ -38,25 +38,7 @@ function action(mode, type, selection) {
 	    status++;
 	else
 	    status--;
-
-	if (!back) {
-	    if (status == 0) {
-		cm.sendSimple("我們目前只有提供到日本旅遊\r\n#L0##b#m800000000");
-	    } else if (status == 1) {
-		cm.sendYesNo("日本古代神社充滿者有趣的氣息，請問你是否要前往?");
-	    /*} else if (status == 2) {
-		cm.sendNext("Check out the female shaman serving the Mushroom God, and I strongly recommend trying Takoyaki, Yakisoba, and other delicious food sold in the streets of Japan. Now, let's head over to #bMushroom Shrine#k, a mythical place if there ever was one.");*/
-	    } else if (status == 2) {
-		if (cm.getMeso() < cost) {
-		    cm.sendPrev("不好意思你的金錢不夠喔");
-		} else {
-		    cm.gainMeso(-cost);
-		    cm.saveLocation("WORLDTOUR");
-		    cm.warp(800000000, 0);
-		    cm.dispose();
-		}
-	    }
-	} else {	    
+    
 	    if (status == 0) {
 		if (selection == 0) {
 		    switch (cm.getMapId()) {
@@ -106,6 +88,5 @@ function action(mode, type, selection) {
 		}
 		cm.dispose();
 	    }
-	}
     }
 }
