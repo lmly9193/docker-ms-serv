@@ -5,15 +5,17 @@
 */
 var status = -1;
 var sel;
-var togo1;
+var togo1, togo2, togo3;
 var map;
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function start() {
 	switch (cm.getMapId()) {
-		case 200000000: //天空之城1
-		case 211000000: //冰原雪域2
+	 case 800000000:
+	 case 500000000:
+	 case 701000000:
+	 case 740000000:
 			map = cm.getSavedLoccation("Worldtour");
 			cm.sendSimple("想到處旅遊嗎?找我就對了，哈哈!!想去哪呢?還是要回去原來的地方? \n\r #b#L0#我想去~#l \n\r #L1#我旅行完了,我要回去#m"+map+"##l");
 			break;
@@ -38,30 +40,53 @@ function action(mode, type, selection) {
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	if (status == 0) {
 		if (selection == 0) {
-			switch (cm.getMapId()) {
-				case 200000000:
-					togo1 = 211000000;
-				case 211000000:
-					togo1 = 200000000;
-				break;
-			}
-			cm.sendSimple("想去哪呢? \n\r #b#L0##m"+togo1+"# (3,000 楓幣)#l");
-		}else if (selection == 1){
-				cm.warp(map);
-				cm.clearSavedLocation("Worldtour");
-				cm.dispose();
-		}
-	}else if (status == 1) {
-			sel = selection;
-			if (sel == 0 ) {
-				cm.sendNext("你確定要前往 #b#m"+togo1+"##k?  到那邊需要 #b3,000 楓幣#k. 確定現在要去嗎?");
-			}
-		}else if (status == 2) {
-			if (sel == 0 ) {
-				cm.warp(togo1);
-			}
+		    switch (cm.getMapId()) {
+			case 740000000:
+			    togo1 = 800000000;
+			    togo2 = 701000000;
+			    togo3 = 500000000;
+			case 500000000:
+			    togo1 = 800000000;
+			    togo2 = 701000000;
+			    togo3 = 740000000;
+			    break;
+			case 800000000:
+			    togo1 = 701000000;
+			    togo2 = 500000000;
+			    togo3 = 740000000;
+			    break;
+			case 701000000:
+			    togo1 = 500000000;
+			    togo2 = 800000000;
+			    togo3 = 740000000;
+			    break;
+		    }
+		    cm.sendSimple("想去哪裡呢? \n\r #b#L0##m"+togo1+"# (3,000 楓幣)#l \n\r #L1##m"+togo2+"# (3,000 楓幣)#l \n\r #L2##m"+togo3+"# (3,000 楓幣)#l");
+
+		} else if (selection == 1) {
+		    cm.warp(map == -1 ? 100000000 : map);
+		    cm.clearSavedLocation("WORLDTOUR");
 		    cm.dispose();
 		}
+	    } else if (status == 1) {
+		sel = selection;
+		if (sel == 0) {
+		    cm.sendNext("你確定要前往 #b#m"+togo1+"##k?  到那邊需要 #b3,000 楓幣#k. 確定現在要去嗎?");
+		} else if (sel == 1) {
+		    cm.sendNext("你確定要前往  #b#m"+togo2+"##k? 到那邊需要 #b3,000 楓幣#k. 確定現在要去嗎?");
+		} else if (sel == 2) {
+		    cm.sendNext("你確定要前往  #b#m"+togo3+"##k? 到那邊需要 #b3,000 楓幣#k. 確定現在要去嗎?");
+		}
+	    } else if (status == 2) {
+		if (sel == 0) {
+		    cm.warp(togo1);
+		} else if (sel == 1) {
+		    cm.warp(togo2);
+		} else if (sel == 2) {
+		    cm.warp(togo3);
+		}
+		cm.dispose();
+	    }
 	}
 }
 				
