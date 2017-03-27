@@ -22,7 +22,7 @@ function action (mode, type, selection) {
 		if (selection == 0){
 			cm.sendSimple("我可以帶你去~ \n\r #b#L0##m800000000##l \n\r #L1##m200000000##l");
 		}else if (selection == 1){
-			cm.sendOK("那有想旅遊可以再找我:)")
+			cm.sendOK("那有想旅遊可以再找我:)");
 			cm.dispose();
 		}
 	}
