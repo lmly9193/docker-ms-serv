@@ -16,13 +16,13 @@ function action (mode, type, selection) {
 	else
 		status--;
 	if (status == 0){
-		cm.sendSimple("你好我是旅遊導遊，你想去哪呢? \n\r #b#L0#我可以去哪邊?#l \n\r #L1#我不想旅遊#l");
+		cm.sendSimple("你好我是世界旅行導遊，你想去哪呢? \n\r #b#L0#我可以去哪邊?#l \n\r #L1#我不想旅遊#l");
 	}
 	else if (status == 1){
 		if (selection == 0){
-			cm.sendSimple("我可以帶你去~ \n\r #b#L0##m200000000##l \n\r #L1##m211000000##l \n\r #b#L2##m250000000##l \n\r #b#L3##m260000000##l \n\r #b#L4##m220000000##l \n\r #b#L5##m240000000##l \n\r #b#L6##m140000000##l \n\r #b#L7##m740000000##l \n\r #b#L8##m700000000##l \n\r #b#L9##m500000000##l \n\r #b#L10##m800000000##l");
+			cm.sendSimple("我可以帶你去~ \n\r #b#L0##m200000000##l \n\r #L1##m211000000##l \n\r #b#L2##m250000000##l \n\r #b#L3##m260000000##l \n\r #b#L4##m220000000##l \n\r #b#L5##m240000000##l \n\r #b#L6##m140000000##l \n\r #b#L7##m740000000##l \n\r #b#L8##m701000000##l \n\r #b#L9##m500000000##l \n\r #b#L10##m800000000##l \n\r #b#L11##m100000000##l");
 		}else if (selection == 1){
-			cm.sendOk("那有想旅遊可以再找我:)");
+			cm.sendOk("那有想旅遊可以再找我喔:)");
 			cm.dispose();
 		}
 	}
@@ -44,11 +44,13 @@ function action (mode, type, selection) {
 		}else if (selection == 7){
 			cm.warp(740000000,0)
 		}else if (selection == 8){
-			cm.warp(700000000,0)
+			cm.warp(701000000,0)
 		}else if (selection == 9){
 			cm.warp(750000000,0)
 		}else if (selection == 10){
 			cm.warp(800000000,0)
+		}else if (selection == 11){
+			cm.warp(100000000,0)
 		}
 		cm.dispose();
 	}
