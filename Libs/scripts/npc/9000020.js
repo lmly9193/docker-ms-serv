@@ -47,19 +47,19 @@ function action(mode, type, selection) {
 
 	if (!back) {
 	    if (status == 0) {
-		cm.sendSimple("我們目前有提供到\r\n#L0##b#m800000000\r\n#L1##b#m500000000\r\n#L2##b#m701000000\r\n#L3##b#m740000000");
-        } else if (status == 1) {
-        if (selection == 0) {
-        cm.sendYesNO("你確定要前往#b#m"800000000"##k?");
-        }else if (selection == 1){
-        cm.sendYesNO("你確定要前往#b#m"500000000"##k?");
-        }else if (selection == 2){
-        cm.sendYesNO("你確定要前往#b#m"701000000"##k?");
-        }else if (selection == 3){
-        cm.sendYesNO("你確定要前往#b#m"740000000"##k?");
-    }
-    }
-cm.dispose(); 
+		cm.sendSimple("我們目前只有提供到日本旅遊\r\n#L0##b#m800000000\r\n#L1##b#m500000000");
+	    } else if (status == 1) {
+		cm.sendYesNo("日本古代神社充滿者有趣的氣息，請問你是否要前往?");
+	    } else if (status == 2) {
+		if (cm.getMeso() < cost) {
+		    cm.sendPrev("不好意思你的金錢不夠喔");
+		} else {
+		    cm.gainMeso(-cost);
+		    cm.saveLocation("WORLDTOUR");
+		    cm.warp(800000000, 0);
+		    cm.dispose();
+		}
+	    }
 	} else {	    
 	    if (status == 0) {
 		if (selection == 0) {
