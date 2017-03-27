@@ -6,18 +6,20 @@
 
 var status = -1;
 var cost, sel;
-var togo1, togo2, togo3;
+var togo1, togo2, togo3, togo4;
 var map;
 var back = true;
 
 function start() {
     switch (cm.getMapId()) {
-	case 800000000:
-	case 500000000:
-	case 701000000:
-	case 740000000:
+	case 800000000://日本神社
+	case 500000000://泰國
+	case 701000000://上海灘
+	case 740000000://西門
+	case 200000000://天空之城
+	case
 	    map = cm.getSavedLocation("WORLDTOUR");
-	    cm.sendSimple("在這裡玩的如何呢?想去別的地方繼續旅遊還是回到原來的地方呢? \n\r #b#L0#我還可以去哪邊?#l \n\r #L1#我旅行完了,我要回去#m"+map+"##l");
+	    cm.sendSimple("在這裡玩的如何呢?想去別的地方繼續旅遊還是回到原來的地方呢? \n\r #b#L0#我還有那些選擇?#l \n\r #L1#我旅行完了,我要回去#m"+map+"##l");
 	    break;
 	default:
 	    back = false;
@@ -44,31 +46,7 @@ function action(mode, type, selection) {
 	    status++;
 	else
 	    status--;
-
-	if (!back) {
-	    if (status == 0) {
-			cm.sendSimple("我們目前有提供到\r\n#L0##b#m800000000\r\n#L1##b#m500000000");
-	    }else if (status == 1) {
-	    	if (selection == 0){
-				cm.sendYesNo("日本古代神社充滿者有趣的氣息，請問你是否要前往?");
-	    	}else if (selection == 1){
-	    		cm.sendYesNo("這裡充滿者有趣的氣息，請問你是否要前往?");
-			}
-		}else if (status == 2) {
-			if (cm.getMeso() < cost) {
-			    cm.sendPrev("不好意思你的金錢不夠喔");
-			} else if (selection == 0) {
-			    cm.gainMeso(-cost);
-			    cm.saveLocation("WORLDTOUR");
-			    cm.warp(800000000, 0);
-			}else if (selection == 1) {
-			    cm.gainMeso(-cost);
-			    cm.saveLocation("WORLDTOUR");
-			    cm.warp(500000000, 0);
-			}
-		cm.dispose();
-		}
-	} else {	    
+	    
 	    if (status == 0) {
 		if (selection == 0) {
 		    switch (cm.getMapId()) {
@@ -76,23 +54,33 @@ function action(mode, type, selection) {
 			    togo1 = 800000000;
 			    togo2 = 701000000;
 			    togo3 = 500000000;
+			    togo4 = 200000000;
 			case 500000000:
 			    togo1 = 800000000;
 			    togo2 = 701000000;
 			    togo3 = 740000000;
+			    togo4 = 200000000;
 			    break;
 			case 800000000:
 			    togo1 = 701000000;
 			    togo2 = 500000000;
 			    togo3 = 740000000;
+			    togo4 = 200000000;
 			    break;
 			case 701000000:
 			    togo1 = 500000000;
 			    togo2 = 800000000;
 			    togo3 = 740000000;
+			    togo4 = 200000000;
+			    break;
+			case 200000000:
+			    togo1 = 500000000;
+			    togo2 = 800000000;
+			    togo3 = 740000000;
+			    togo4 = 701000000;
 			    break;
 		    }
-		    cm.sendSimple("想去哪裡呢? \n\r #b#L0##m"+togo1+"# (3,000 楓幣)#l \n\r #L1##m"+togo2+"# (3,000 楓幣)#l \n\r #L2##m"+togo3+"# (3,000 楓幣)#l");
+		    cm.sendSimple("想去哪裡呢? \n\r #b#L0##m"+togo1+"# (3,000 楓幣)#l \n\r #L1##m"+togo2+"# (3,000 楓幣)#l \n\r #L2##m"+togo3+"# (3,000 楓幣)#l \n\r #L3##m"+togo4+"# (3,000 楓幣)#l");
 
 		} else if (selection == 1) {
 		    cm.warp(map == -1 ? 100000000 : map);
@@ -107,6 +95,8 @@ function action(mode, type, selection) {
 		    cm.sendNext("你確定要前往  #b#m"+togo2+"##k? 到那邊需要 #b3,000 楓幣#k. 確定現在要去嗎?");
 		} else if (sel == 2) {
 		    cm.sendNext("你確定要前往  #b#m"+togo3+"##k? 到那邊需要 #b3,000 楓幣#k. 確定現在要去嗎?");
+		} else if (sel == 3) {
+		    cm.sendNext("你確定要前往  #b#m"+togo4+"##k? 到那邊需要 #b3,000 楓幣#k. 確定現在要去嗎?");
 		}
 	    } else if (status == 2) {
 		if (sel == 0) {
@@ -115,6 +105,8 @@ function action(mode, type, selection) {
 		    cm.warp(togo2);
 		} else if (sel == 2) {
 		    cm.warp(togo3);
+		} else if (sel == 3) {
+		    cm.warp(togo4);
 		}
 		cm.dispose();
 	    }
