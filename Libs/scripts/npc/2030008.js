@@ -3,15 +3,18 @@
     Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
                        Matthias Butz <matze@odinms.de>
                        Jan Christian Meyer <vimes@odinms.de>
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License version 3
     as published by the Free Software Foundation. You may not use, modify
     or distribute this program under any other version of the
     GNU Affero General Public License.
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Affero General Public License for more details.
+
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
@@ -39,7 +42,7 @@ var minLevel = 50;
 
 function start() {
 	if(cm.haveItem(4001109)){
-		cm.sendNext("æœ‰å¼·åŒ–çš„çŽ»ç’ƒç“¶å—Ž...é‚£éº¼ä½ èƒ½å¤ é€²åŽ»");
+		cm.sendNext("¦³±j¤Æªº¬Á¼þ²~¶Ü...¨º»ò§A¯à°÷¶i¥h");
 		teethmode = 3;
 	}else if (cm.getPlayer().getLevel() >= minLevel) {
         if (cm.isQuestFinished(100200) && !cm.isQuestActive(100200)) {
