@@ -31,27 +31,29 @@
  * 4000082 = Zombie's Gold Tooth (stage 3 req)
 */
 
-var status;
+var status = 0;
 var mapId = 211042300;
 var stage;
 var teethmode;
 var minLevel = 50;
 
 function start() {
-    if (cm.getPlayer().getLevel() >= minLevel) {
-        if (cm.isQuestCompleted(100200) && !cm.isQuestStarted(100200)) {
+	if(cm.haveItem(4001109)){
+		cm.sendNext("有強化的玻璃瓶嗎...那麼你能夠進去");
+		teethmode = 3;
+	}else if (cm.getPlayer().getLevel() >= minLevel) {
+        if (cm.isQuestFinished(100200) && !cm.isQuestActive(100200)) {
             cm.startQuest(100200);
             cm.sendOk("You want to be permitted to do the Zakum Dungeon Quest?  Well, I, #bAdobis#k... judge you to be suitable.  You should be safe roaming around the dungeon.  Just be careful...");
             cm.dispose();
             return;
-        }
-        else if (cm.isQuestStarted(100201)) {
+        }else if (cm.isQuestActive(100201)) {
             teethmode = 1;
             cm.sendNext("Have you got the items I asked for?  This ain't no charity.");
+        }else{
+            cm.sendSimple("Beware, for the power of olde has not been forgotten... #b\r\n#L0#Enter the Unknown Dead Mine (Stage 1)#l\r\n#L1#Face the Breath of Lava (Stage 2)#l\r\n#L2#Forging the Eyes of Fire (Stage 3)#l\r\n");
         }
-        else
-            cm.sendSimple("Beware, for the power of olde has not been forgotten... #b\r\n#L0#Enter the Unknown Dead Mine (Stage 1)#l\r\n#L1#Face the Breath of Lava (Stage 2)#l\r\n#L2#Forging the Eyes of Fire (Stage 3)#l");
-        if (cm.isQuestCompleted(100201))
+		if (cm.isQuestFinished(100201))
             teethmode = 2;
     }
     else {
@@ -73,6 +75,15 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 1) {
+			if(teethmode == 3){
+				var dd = cm.getEventManager("FireDemon");
+				if (dd != null && cm.haveItem(4001109)) {
+					dd.startInstance(cm.getPlayer());
+				} else {
+					cm.sendOk("An unknown error occured.");
+				}
+				cm.dispose();
+			}
             if (teethmode == 1) {
                 if (cm.haveItem(4031061,1) && cm.haveItem(4031062,1) && cm.haveItem(4000082,30)) {
                     cm.gainItem(4031061,-1);
