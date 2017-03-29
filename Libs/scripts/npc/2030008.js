@@ -181,6 +181,7 @@ function action(mode, type, selection) {
                         cm.sendNext("Thank you for the teeth!  Next time you see me, I'll be blinging harder than #rJaws#k!  Goodbye and good luck!");
                         cm.completeQuest(100201);
                         cm.completeQuest(100200);
+                        cm.startQuest(100203)
                         cm.dispose();
                     }
                     else {
