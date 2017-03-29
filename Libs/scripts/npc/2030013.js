@@ -26,7 +26,7 @@ function action(mode, type, selection) {
 			cm.dispose();
 			return;
 		}
-		if (cm.getPlayer().getClient().getChannel() != 7) {
+		if (cm.getPlayer().getClient().getChannel() != 1) {
 			cm.sendOk("Chaos Zakum may only be attempted on channel 7.");
 			cm.dispose();
 			return;
@@ -190,8 +190,8 @@ function action(mode, type, selection) {
 			cm.dispose();
 			return;
 		}
-		if (cm.getPlayer().getClient().getChannel() != 3 && cm.getPlayer().getClient().getChannel() != 2) {
-			cm.sendOk("Zakum may only be attempted on channel 2 and 3.");
+		if (cm.getPlayer().getClient().getChannel() != 1) {
+			cm.sendOk("Zakum may only be attempted on channel 1.");
 			cm.dispose();
 			return;
 		}
