@@ -3,7 +3,7 @@
 */
 
 function enter(pi) {
-    if (pi.getQuestStatus(100200) != 2) {
+    if (pi.getQuestStatus(100200) != 1) {
 	pi.playerMessage(5, "You are not ready to face the boss.");
 	return false;
 
