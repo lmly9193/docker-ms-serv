@@ -1,43 +1,59 @@
+/*
+	NPC Name: 		Spinel
+	Map(s): 		Victoria Road : Henesys (100000000), Victoria Road : Ellinia (101000000), Victoria Road : Perion (102000000), Victoria Road : Kerning City (103000000), Victoria Road : Lith Harbor (104000000), Orbis : Orbis (200000000), Ludibrium : Ludibrium (220000000), Leafre : Leafre (240000000), Zipangu : Mushroom Shrine (800000000)
+	Description: 		World Tour Guide
+*/
 
 var status ;
-var gainItem = false;
 
-function start() {
-    status = -1;
-    action(1, 0, 0);
+function start(){
+	status = -1
+	action(1, 0, 0); 
 }
-
-function action(mode, type, selection) {
-	if (mode == 1)
-	status++;
-    else
-	status--;
+function action (mode, type, selection) {
+	if (mode == 1){
+		status++;
+	}else{
+		status--;
+	}
 	if (status == 0){
-		cm.sendSimple("你好我是造型物，找我有什麼事? \n\r #b#L0#我想要時空裂縫的D碎片#l \n\r #L1#沒什麼事#l");
-	}else if (status == 1 ) {
-		var currenttime = new Date().getTime();
-		var record = pi.getQuestRecord(7200);
-		var diff = currenttime - record.getCompletionTime();
-		if (selection == 0 && cm.haveItem(4031172) && diff >= 86400000) {
-			gainItem = true;
-			cm.sendOk("碎片就交給你吧!記得每天可以跟我領2個碎片:)");
-			record.setCompletionTime(currenttime);
-	    	cm.gainItem(4031179);
-	    	cm.dispose();
-	    }else if (selection == 1){
-	    	cm.sendOk("有事再找我囉! 掰!");
-	    	cm.dispose();
-		}else if (selection == 0 && !cm.haveItem(4031172)){
-			cm.sendOk("你沒有玩具城獎牌我不能把碎片交給你，抱歉!");
+		cm.sendSimple("你好我是世界旅行導遊，你想去哪呢? \n\r #b#L0#我可以去哪邊?#l \n\r #L1#我不想旅遊#l");
+	}else if (status == 1){
+		if (selection == 0){
+			cm.sendSimple("我可以帶你去~ \n\r #b#L0##m200000000##l \n\r #L1##m211000000##l \n\r #b#L2##m250000000##l \n\r #b#L3##m260000000##l \n\r #b#L4##m220000000##l \n\r #b#L5##m240000000##l \n\r #b#L6##m140000000##l \n\r #b#L7##m740000000##l \n\r #b#L8##m701000000##l \n\r #b#L9##m500000000##l \n\r #b#L10##m800000000##l \n\r #b#L11##m100000000##l\n\r #b#L12##m540000000##l");
+		}else if (selection == 1){
+			cm.sendOk("那有想旅遊可以再找我喔:)");
 			cm.dispose();
 		}
-	 }else {
-	    	return false;
-	 }
-	if (!gianItem && status == 1){
-	 	 cm.sendOk("抱歉!你今天已經領過了");
-	 	 return false;
-	 	 cm.dispose();
+	}else if (status == 2){
+		if (selection == 0){
+			cm.warp(200000000,0)
+		}else if (selection == 1){
+			cm.warp(211000000,0)
+		}else if (selection == 2){
+			cm.warp(250000000,0)
+		}else if (selection == 3){
+			cm.warp(260000000,0)
+		}else if (selection == 4){
+			cm.warp(220000000,0)
+		}else if (selection == 5){
+			cm.warp(240000000,0)
+		}else if (selection == 6){
+			cm.warp(140000000,0)
+		}else if (selection == 7){
+			cm.warp(740000000,0)
+		}else if (selection == 8){
+			cm.warp(701000000,0)
+		}else if (selection == 9){
+			cm.warp(750000000,0)
+		}else if (selection == 10){
+			cm.warp(800000000,0)
+		}else if (selection == 11){
+			cm.warp(100000000,0)
+			}else if (selection == 12){
+			cm.warp(540000000,0)
+		}
+		cm.dispose();
 	}
-
 }
+				
