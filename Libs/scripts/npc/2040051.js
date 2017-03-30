@@ -7,6 +7,6 @@ function start() {
 }
 
 function action(mode, type, selection) {
-    cm.openShop(64);
+    cm.openShop(51);
     cm.dispose();
 }
