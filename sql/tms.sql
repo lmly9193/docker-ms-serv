@@ -36243,6 +36243,7 @@ INSERT INTO `shops` VALUES ('92', '9330029');
 INSERT INTO `shops` VALUES ('93', '9110100');
 INSERT INTO `shops` VALUES ('94', '9110102');
 INSERT INTO `shops` VALUES ('95', '9270021');
+INSERT INTO `shops` VALUES ('96', '2040051');
 
 -- ----------------------------
 -- Table structure for `skillmacros`

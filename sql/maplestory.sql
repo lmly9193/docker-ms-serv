@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
@@ -29397,7 +29397,8 @@ INSERT INTO `shops` (`shopid`, `npcid`) VALUES
 (92, 9330029),
 (93, 9110100),
 (94, 9110102),
-(95, 9270021);
+(95, 9270021),
+(96, 2040051);
 
 -- --------------------------------------------------------
 
