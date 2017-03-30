@@ -1,5 +1,4 @@
 var status = -1;
-var skills = Array(21001003, 21000000, 21100002, 21100004, 21100005, 21110002);
 //polearm booster, combo ability, polearm mastery, final charge, combo smash, combo drain, full swing
 function start(mode, type, selection) {
     if (mode == 1) {
@@ -30,10 +29,10 @@ function start(mode, type, selection) {
 	    qm.expandInventory(4, 4);
 	    qm.gainItem(1142129, 1);
 	    qm.forceCompleteQuest(29924); //medal
-	    qm.teachSkill(20009000, 0, -1);
-	    qm.teachSkill(20009000, 1, 0);
-		for (var i = 0; i < skills.length; i++) {
-			qm.teachSkill(skills[i], 0);
+        qm.teachSkill(21000002,0,20);
+        qm.teachSkill(21001001,0,15);
+        qm.teachSkill(21000000,0,10);
+        qm.teachSkill(20009000,1,1);
 		}
 	    qm.sendNextS("#b(I feel like something popping up in my head...)#k", 3);
 	}
