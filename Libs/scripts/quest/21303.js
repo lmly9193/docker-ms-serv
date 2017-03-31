@@ -4,4 +4,9 @@ function start(mode, type, selection) {
 	qm.forceStartQuest(21303);
 	qm.dispose();
 }
-
+function end (mode, type, selection) {
+	if (qm.getQuestStatus(21303) == 0) {
+		qm.forceStartQuest(21303);
+	}
+	qm.dispose();
+}
