@@ -6,6 +6,7 @@ function enter(pi) {
 	}
 	if (pi.getQuestStatus(21302) == 1) {
 		pi.resetMap(108010702);
+		pi.getEventManager("3rdjob2");
 		pi.warp(108010701, 0);
 	} else {
 		pi.warp(108000700, 0);
