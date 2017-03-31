@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <imgdir name="Mob.img">
+    <imgdir name="0000100">
+        <sound name="Attack1"/>
+        <sound name="Die"/>
+        <sound name="Damage"/>
+        <sound name="Skill1"/>
+    </imgdir>
     <imgdir name="0100100">
         <sound name="Damage"/>
         <sound name="Die"/>

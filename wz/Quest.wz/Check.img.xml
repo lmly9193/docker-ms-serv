@@ -13277,7 +13277,7 @@
             </imgdir>
             <imgdir name="mob">
                 <imgdir name="0">
-                    <int name="id" value="9001013"/>
+                    <int name="id" value="0000100"/>
                     <int name="count" value="1"/>
                 </imgdir>
             </imgdir>
