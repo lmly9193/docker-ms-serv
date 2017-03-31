@@ -3558,11 +3558,11 @@
         <string name="type" value="[轉職]"/>
     </imgdir>
     <imgdir name="21301">
-        <string name="name" value="回復記憶！"/>
+        <string name="name" value="捉拿小偷！"/>
         <int name="area" value="6"/>
-        <string name="0" value="主人看來你越來越強大了。"/>
-        <string name="1" value="看來應該可以喚醒你的力量..."/>
-        <string name="2" value="你的力量喚醒了一些了，你的能力比之前更多了，快將能力找回，然後我們要像從前一樣憶起冒險><"/>
+        <string name="0" value="為什麼會潛入到島上來了呢？ 去問問#b#p1201002##k吧。"/>
+        <string name="1" value="鑲在#p1201002#上的寶石 #t4032312#被盜走了！竊盜犯#o9001013#正逃往 #m140020300# 方向了。應該是想利用船隻逃走。趕快去#m140020300#消滅 #r#o9001013##k吧。\r\n\r\n#o9001013##r #a213011##k"/>
+        <string name="2" value="消滅了#o9001013#。不過#t4032312#還是沒找到… 知道這個事情後，#p1201002#發了很大的火。"/>
         <string name="type" value="[轉職]"/>
     </imgdir>
     <imgdir name="21302">
