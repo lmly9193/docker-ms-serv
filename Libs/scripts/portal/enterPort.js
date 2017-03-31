@@ -1,7 +1,7 @@
 var map = 108010700;
 
 function enter(pi) {
-	if (pi.isQuestActive(21301)) {
+	if (pi.getQuestStatus(21301) == 0) {
 		pi.resetMap(map);
 		pi.warp(map, 1);
 	} else {
