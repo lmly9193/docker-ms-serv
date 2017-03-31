@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<imgdir name="9001013.img">
+<imgdir name="0000100.img">
     <imgdir name="info">
         <int name="bodyAttack" value="1"/>
         <int name="level" value="80"/>
