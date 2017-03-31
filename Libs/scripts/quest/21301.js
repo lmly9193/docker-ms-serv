@@ -1,14 +1,15 @@
 var status = -1;
-var map = 108010700;
 
 function start(mode, type, selection) {
 	qm.forceStartQuest(21301);
-	cm.warp(map, 1);
 	qm.dispose();
 }
 
 function end(mode, type, selection) {
-	qm.forceStartQuest(21301);
-	cm.warp(map, 1);
+	if (qm.getQuestStatus(21301) == 0) {
+		qm.forceStartQuest(21301);
+	} else if (qm.getQuestStatus(21301) == 1) {
+		qm.forceCompleteQuest();
+	}
 	qm.dispose();
 }
