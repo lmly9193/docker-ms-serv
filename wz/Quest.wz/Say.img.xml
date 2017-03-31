@@ -8992,9 +8992,6 @@
                 <string name="2" value="嘻嘻，我要吃掉#p1203001#寶石囉！有空再來找我玩唷。"/>
             </imgdir>
             <imgdir name="stop">
-                <imgdir name="item">
-                    <string name="0" value="還沒抓到小偷？小偷往左邊逃走了。去抓小偷把寶石拿回來就行了。"/>
-                </imgdir>
                 <imgdir name="mob">
                     <string name="0" value="還沒抓到小偷？小偷往左邊逃走了。去抓小偷把寶石拿回來就行了。"/>
                 </imgdir>
