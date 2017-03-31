@@ -11236,10 +11236,6 @@
                 <vector name="origin" x="0" y="0"/>
                 <int name="delay" value="500"/>
             </canvas>
-            <canvas name="0000100" width="25" height="25">
-                <vector name="origin" x="0" y="0"/>
-                <int name="delay" value="500"/>
-            </canvas>
             <canvas name="9001014" width="25" height="25">
                 <vector name="origin" x="0" y="0"/>
                 <int name="delay" value="500"/>

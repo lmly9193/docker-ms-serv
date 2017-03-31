@@ -6,10 +6,6 @@
         <sound name="Damage"/>
         <sound name="Skill1"/>
     </imgdir>
-    <imgdir name="0100100">
-        <sound name="Damage"/>
-        <sound name="Die"/>
-    </imgdir>
     <imgdir name="0100101">
         <uol name="Damage" value="../0100100/Damage"/>
         <uol name="Die" value="../0100100/Die"/>

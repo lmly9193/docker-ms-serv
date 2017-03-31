@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <imgdir name="Mob.img">
-    <imgdir name="0000100">
-        <string name="name" value="逃跑的野烏鴉"/>
-    </imgdir>
     <imgdir name="100100">
         <string name="name" value="嫩寶"/>
     </imgdir>
