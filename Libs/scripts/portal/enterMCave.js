@@ -4,5 +4,8 @@ function enter(pi) {
 	pi.playerMessage(5, "You recovered your memories!");
     }
     pi.warp(108000700,0);
+	}else if (pi.isQuestActive(21302))
+		pi.warp(108010701,0);
+	}
  //what does this even do
 }
