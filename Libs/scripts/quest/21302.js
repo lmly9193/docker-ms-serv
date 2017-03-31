@@ -4,8 +4,3 @@ function start(mode, type, selection) {
 	qm.forceStartQuest(21302);
 	qm.dispose();
 }
-
-function end(mode, type, selection) {
-	qm.completeQuest(21302);
-	qm.dispose();
-}

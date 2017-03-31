@@ -5,7 +5,3 @@ function start(mode, type, selection) {
 	qm.dispose();
 }
 
-function end(mode, type, selection) {
-	qm.completeQuest(21303);
-	qm.dispose();
-}
