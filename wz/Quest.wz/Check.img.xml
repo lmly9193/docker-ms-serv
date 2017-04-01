@@ -13254,7 +13254,7 @@
             <string name="startscript" value="q21303s"/>
             <imgdir name="infoex">
                 <imgdir name="0">
-                    <string name="value" value="1"/>
+                    <string name="value" value="0"/>
                 </imgdir>
             </imgdir>
             <imgdir name="quest">
@@ -20145,12 +20145,6 @@
             <string name="startscript" value="q29924s"/>
             <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="10"/>
-            <imgdir name="item">
-                <imgdir name="0">
-                    <int name="id" value="1142129"/>
-                    <int name="count" value="1"/>
-                </imgdir>
-            </imgdir>
             <imgdir name="job">
                 <int name="0" value="2100"/>
                 <int name="1" value="2110"/>
@@ -20167,12 +20161,6 @@
             <int name="npc" value="9000066"/>
             <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="30"/>
-            <imgdir name="item">
-                <imgdir name="0">
-                    <int name="id" value="1142130"/>
-                    <int name="count" value="1"/>
-                </imgdir>
-            </imgdir>
             <imgdir name="job">
                 <int name="0" value="2110"/>
                 <int name="1" value="2111"/>
@@ -20188,12 +20176,6 @@
             <int name="normalAutoStart" value="1"/>
             <string name="startscript" value="q29926s"/>
             <int name="lvmin" value="70"/>
-            <imgdir name="item">
-                <imgdir name="0">
-                    <int name="id" value="1142131"/>
-                    <int name="count" value="1"/>
-                </imgdir>
-            </imgdir>
             <imgdir name="job">
                 <int name="0" value="2111"/>
                 <int name="1" value="2112"/>
@@ -20208,12 +20190,6 @@
             <int name="normalAutoStart" value="1"/>
             <string name="startscript" value="q29927s"/>
             <int name="lvmin" value="120"/>
-            <imgdir name="item">
-                <imgdir name="0">
-                    <int name="id" value="1142132"/>
-                    <int name="count" value="1"/>
-                </imgdir>
-            </imgdir>
             <imgdir name="job">
                 <int name="0" value="2112"/>
             </imgdir>
@@ -20227,12 +20203,6 @@
             <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="200"/>
             <string name="startscript" value="q29928s"/>
-            <imgdir name="item">
-                <imgdir name="0">
-                    <int name="id" value="1142133"/>
-                    <int name="count" value="1"/>
-                </imgdir>
-            </imgdir>
             <imgdir name="job">
                 <int name="0" value="2112"/>
             </imgdir>
