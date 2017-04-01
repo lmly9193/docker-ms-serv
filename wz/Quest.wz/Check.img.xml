@@ -20143,6 +20143,7 @@
         <imgdir name="0">
             <int name="npc" value="9000066"/>
             <string name="startscript" value="q29924s"/>
+            <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="10"/>
             <imgdir name="job">
                 <int name="0" value="2100"/>
