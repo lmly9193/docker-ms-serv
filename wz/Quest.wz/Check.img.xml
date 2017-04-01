@@ -20143,7 +20143,6 @@
         <imgdir name="0">
             <int name="npc" value="9000066"/>
             <string name="startscript" value="q29924s"/>
-            <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="10"/>
             <imgdir name="job">
                 <int name="0" value="2100"/>
@@ -20159,7 +20158,6 @@
         <imgdir name="0">
             <string name="startscript" value="q29925s"/>
             <int name="npc" value="9000066"/>
-            <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="30"/>
             <imgdir name="job">
                 <int name="0" value="2110"/>
@@ -20173,7 +20171,6 @@
     <imgdir name="29926">
         <imgdir name="0">
             <int name="npc" value="9000066"/>
-            <int name="normalAutoStart" value="1"/>
             <string name="startscript" value="q29926s"/>
             <int name="lvmin" value="70"/>
             <imgdir name="job">
@@ -20187,7 +20184,6 @@
     <imgdir name="29927">
         <imgdir name="0">
             <int name="npc" value="9000066"/>
-            <int name="normalAutoStart" value="1"/>
             <string name="startscript" value="q29927s"/>
             <int name="lvmin" value="120"/>
             <imgdir name="job">
@@ -20200,7 +20196,6 @@
     <imgdir name="29928">
         <imgdir name="0">
             <int name="npc" value="9000066"/>
-            <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="200"/>
             <string name="startscript" value="q29928s"/>
             <imgdir name="job">
