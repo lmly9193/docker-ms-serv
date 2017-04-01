@@ -7402,7 +7402,7 @@
             <imgdir name="item">
                 <imgdir name="0">
                     <int name="id" value="4032339"/>
-                    <int name="count" value="1"/>
+                    <int name="count" value="-1"/>
                 </imgdir>
                 <imgdir name="1">
                     <int name="id" value="4032312"/>
