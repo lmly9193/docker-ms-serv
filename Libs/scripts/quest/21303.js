@@ -9,7 +9,7 @@ function end (mode, type, selection) {
 		qm.forceStartQuest(21303);
 	}else if (qm.getQuestStatus(21301) == 1) {
 		qm.forceCompleteQuest();
+		qm.gainItem(4032312, 1)
 	}
-	qm.gainItem(4032312,1);
 	qm.dispose();
 }
