@@ -17,7 +17,7 @@ function start(mode, type, selection) {
         qm.forceStartQuest(21200, "3"); //??
         qm.forceCompleteQuest();
         qm.forceStartQuest(21202); //skip just in case
-        qm.forceStartQuest(21203, "0");
+       // qm.forceStartQuest(21203, "0");
         qm.sendOk("Your #bGiant Pole Arm#k that's being kept in #bRien#k is acting strange all of a sudden. According to the book, the pole arm reacts like this when it's calling for its master. #bMaybe it's calling for you?#k? Please come back to the island and find out.");
         qm.dispose();
     }
