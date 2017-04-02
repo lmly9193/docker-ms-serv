@@ -14,10 +14,8 @@ function start(mode, type, selection) {
     if (status == 0) {
 	qm.askAcceptDecline("How's the training going? Wow, looking at you, I can tell your levels have shot through the roof. That's amazing... well, anyway, I see that you'r busy, but you'll have to return to the island for a bit.");
     } else if (status == 1) {
-	qm.forceStartQuest(21200, "3"); //??
-	qm.forceCompleteQuest();
+	qm.forceStartQuest(21200,); //??
 	qm.forceStartQuest(21201); //skip just in case
-//	qm.forceStartQuest(21203, "0");
 	qm.sendOk("Your #bGiant Pole Arm#k that's being kept in #bRien#k is acting strange all of a sudden. According to the book, the pole arm reacts like this when it's calling for its master. #bMaybe it's calling for you?#k? Please come back to the island and find out.");
 	qm.dispose();
     }
