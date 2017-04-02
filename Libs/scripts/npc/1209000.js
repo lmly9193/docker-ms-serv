@@ -8,7 +8,7 @@ function action(mode, type, selection) {
 	    status--;
 	}
 	if (status == 0) {
-	    cm.sendNext("嘿!亞蘭你終於醒了! 什麼你受傷了?...  你想知道現在發生什麼事情嗎?");
+	    cm.sendNext("Oh Aran, you're awake! How's the injury?... What? Do you want to know what's going on right now?");
 	} else if (status == 1) {
 	    cm.sendNextPrev("We're all set and ready to leave this place. We have everyone on board in the ark, and the Divine Bird offered to protect our ark during the flight, so there's nothing you need to worry. Once we finalize everything, we'll go ahead and escape to Victoria Island.");
 	} else if (status == 2) {
