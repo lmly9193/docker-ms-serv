@@ -5,22 +5,22 @@ function start(mode, type, selection) {
 	status++;
     } else {
 	if (status == 0) {
-	    qm.sendNext("No, Aran... There's no point of leaving here if we're to just leave the kid here all by himself. I know it's a lot to ask... but please reconsider!");
+	    qm.sendNext("不!#b亞蘭#k...如果我們離開把孩子自己留在這裡，這不是我們離開的原因。我知道我話很多，但是請重新考慮!");
 	    qm.dispose();
 	    return;
 	}
 	status--
     }
     if (status == 0) {
-	qm.askAcceptDecline("Wait, where's the kid? Oh no, he must be stuck in the forest! We need to bring the kid back here before the ark leaves! Aran... please go in there and find the kid for me! I know it's a lot to ask considering you're injured... but you're our only hope!");
+	qm.askAcceptDecline("等等!!少了一個孩子...孩子在哪?喔不，他一定被困在森林裡!我們需要帶回那孩子在方舟離開之前#b亞蘭#k...拜託找到那孩子!我知道你受傷了，但你是我們唯一的希望!");
     } else if (status == 1) {
 	qm.forceStartQuest(21000); // Idk what data lol..
 	qm.forceStartQuest(21000); // Twice, intended..
-	qm.sendNext("#bThe kid is probably somewhere deep in the forest#k! We need to leave right now before the Black Wizard finds us, so please hurry!");
+	qm.sendNext("#b那孩子可能在森林的抹一個地方#k，你必須在#r黑魔法師#k找到我們之前離開，所以請快點!!!");
     } else if (status == 1) {
-	qm.sendNextPrev("The most important thing right now is not to panic, Aran. If you want to see how far you've gone with your quest, press #bQ#k to open the quest window.");
+	qm.sendNextPrev("現在最重要的是不要緊張，#b亞蘭(狂狼勇士)#k。你可以按下#bQ#k打開任務欄，看看任務的位置。");
     } else if (status == 2) {
-	qm.sendNextPrev("Please rescue the kid from the forest, Aran! We cannot afford any more casualties at the hands of the Black Wizard!");
+	qm.sendNextPrev("#b亞蘭(狂狼勇士)#k!請救出孩子，我們不能再有人受到#r黑魔法師#k的傷害了!");
     } else if (status == 3) {
 	qm.AranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow1");
 	qm.dispose();

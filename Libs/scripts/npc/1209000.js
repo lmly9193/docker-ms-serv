@@ -8,11 +8,11 @@ function action(mode, type, selection) {
 	    status--;
 	}
 	if (status == 0) {
-	    cm.sendNext("Oh Aran, you're awake! How's the injury?... What? Do you want to know what's going on right now?");
+	    cm.sendNext("嘿!亞蘭(狂狼勇士)你終於醒了! 什麼你受傷了?...  你想知道現在發生什麼事情嗎?");
 	} else if (status == 1) {
-	    cm.sendNextPrev("We're all set and ready to leave this place. We have everyone on board in the ark, and the Divine Bird offered to protect our ark during the flight, so there's nothing you need to worry. Once we finalize everything, we'll go ahead and escape to Victoria Island.");
+	    cm.sendNextPrev("我們已經準備好要離開這個地方了。大家都已經上了方舟，在方舟飛行中會有神鳥保護我們，所以別太擔心。一旦我們確定了一切，我們會繼續前往維多利亞島。");
 	} else if (status == 2) {
-	    cm.sendNextPrev("Aran's comrades...? Well... they went over to battle the Black Wizard. They decided to take on the Black Wizard while we make the escape. What? You want to join them in the battle? No, no way! You're injured! You should get on board right now!");
+	    cm.sendNextPrev("亞蘭(狂狼勇士)夥伴...? 好吧... 他們去和#r黑魔法師#k戰鬥了。當我們準備要逃跑時，它們決定和黑魔法師戰鬥並且封印他。什麼!?你想加入他們?不行!沒辦法，你已經受傷了你應該要上船跟我們一起走...");
 	} else if (status == 3) {
 	    cm.forceStartQuest(21002, "1");
 	    // Ahh, Oh No. The kid is missing
@@ -26,17 +26,17 @@ function action(mode, type, selection) {
 	    status--;
 	}
 	if (status == 0) {
-	    cm.sendSimple("We're in a state of emergency. What would you like to know? \r #b#L0#Where's the Black Wizard?#l \r #b#L1#How's the preparation for the escape?#l \r #b#L2#How about the comrades?#l");
+	    cm.sendSimple("我們現在狀態緊急，你想知道什麼? \r #b#L0#黑魔法師在哪?#l \r #b#L1#如何離開這?#l \r #b#L2#我的夥伴呢?#l");
 	} else if (status == 1) {
 	    switch (selection) {
 		case 0:
-		    cm.sendOk("I hear that the Black Wizard is close to where we're right now. We can't even escape through the forest because of the dragons Black Wizard control. That's why we came up with the ark as our escape route. The only way we can leave this place is by flying towards Victoria Island.");
+		    cm.sendOk("我聽說現在#r黑魔法師#k正在靠近我們的地方。因為#r黑魔法師#k控制了所有龍的關係，甚至不可能從森林逃出.正因為這樣，所以我們才想出利用方舟作為我們的逃生路線。離開這裡的唯一方法就是飛往#b維多利亞島#k。");
 		    break;
 		case 1:
-		    cm.sendOk("We have everyone on board in the ark, and we're all set and ready to escape this place. We just need a few more on board, and we're off to Victoria Island. During our flight, the Divine Bird offered protection, seeing that she has no one to protect at Erev at this point.");
+		    cm.sendOk("在方舟上的每一個人，都準備好離開這個地方了。當人都上船了，我們就要立刻前往#b維多利亞島#k。在空中神鳥會保護我們。");
 		    break;
 		case 2:
-		    cm.sendOk("Your comrades... left here to battle the Black Wizard by themselves, buying some time as we make the escape. They decided not to take you, since you are injured and all. Once we save the kid, you should get on board and leave with us, Aran!");
+		    cm.sendOk("你的夥伴...為了幫助我們有足夠的時間逃離這，已經去和#r黑魔法師#k戰鬥了。他們決定不讓你去，因為你受傷了，他們希望妳可以和我們一起離開。亞蘭!一旦救了孩子，你應該和我們一起離開。");
 		    break;
 	    }
 	    cm.safeDispose();
