@@ -29,9 +29,6 @@ function start(mode, type, selection) {
 	    qm.expandInventory(4, 4);
 	    qm.gainItem(1142129, 1);
 	    qm.forceCompleteQuest(29924); //medal
-		for (var i = 0; i < skills.length; i++) {
-			qm.teachSkill(skills[i], 0);
-		}
 	    qm.sendNextS("#b(I feel like something popping up in my head...)#k", 3);
 	}
     } else if (status == 2) {
