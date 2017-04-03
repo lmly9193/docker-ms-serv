@@ -7404,10 +7404,6 @@
                     <int name="id" value="4032339"/>
                     <int name="count" value="-1"/>
                 </imgdir>
-                <imgdir name="1">
-                    <int name="id" value="4032312"/>
-                    <int name="count" value="1"/>
-                </imgdir>
             </imgdir>
         </imgdir>
     </imgdir>
