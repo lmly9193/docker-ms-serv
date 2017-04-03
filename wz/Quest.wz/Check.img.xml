@@ -13260,7 +13260,7 @@
             <imgdir name="quest">
                 <imgdir name="0">
                     <int name="id" value="21302"/>
-                    <int name="state" value="0"/>
+                    <int name="state" value="1"/>
                 </imgdir>
             </imgdir>
             <imgdir name="job">
@@ -20159,6 +20159,7 @@
         <imgdir name="0">
             <string name="startscript" value="q29925s"/>
             <int name="npc" value="9000066"/>
+            <int name="normalAutoStart" value="1"/>
             <int name="lvmin" value="30"/>
             <imgdir name="job">
                 <int name="0" value="2110"/>
