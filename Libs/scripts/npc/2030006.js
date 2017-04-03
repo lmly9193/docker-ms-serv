@@ -22,22 +22,22 @@ function action(mode, type, selection) {
 	status--;
     if (status == 0) {
 	if (cm.haveItem(4031058) || cm.getQuestStatus(100102) != 1) {
-	    cm.sendOk("æˆ‘æ˜¯ä¸€å€‹çŸ³é ­.");
+	    cm.sendOk("§Ú¬O¤@­Ó¥ÛÀY.");
 	    cm.dispose();
 	} else {
-	    cm.sendNext("æˆ‘æ˜¯ä¸€å€‹çŸ³é ­.");
+	    cm.sendNext("§Ú¬O¤@­Ó¥ÛÀY.");
 	}
     } else if (status == 1) {
-	cm.sendNextPrev("çµ¦æˆ‘#bé»‘æš—æ°´æ™¶#k ä¸”å›ç­”æˆ‘çš„å•é¡Œï¼Œæˆ‘æœƒçµ¦ä½ #bæ™ºæ…§é …éŠ#k.");
+	cm.sendNextPrev("µ¹§Ú#b¶Â·t¤ô´¹#k ¥B¦^µª§Úªº°İÃD¡A§Ú·|µ¹§A#b´¼¼z¶µÁå#k.");
     } else if (status == 2) {
 	if (!cm.haveItem(4005004)) {
-	    cm.sendOk("ä½ æ²’æœ‰#bé»‘æš—æ°´æ™¶#k.");
+	    cm.sendOk("§A¨S¦³#b¶Â·t¤ô´¹#k.");
 	    cm.dispose();
 	} else {
         cm.completeQuest(100102);
 	    cm.gainItem(4005004,-1);
 	    cm.gainItem(4031058,1);
-	    cm.sendOk("å®Œæˆ..");
+	    cm.sendOk("§¹¦¨..");
 	    cm.dispose();
 	}
     }
