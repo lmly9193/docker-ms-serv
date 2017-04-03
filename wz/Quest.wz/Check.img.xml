@@ -13260,7 +13260,7 @@
             <imgdir name="quest">
                 <imgdir name="0">
                     <int name="id" value="21302"/>
-                    <int name="state" value="0"/>
+                    <int name="state" value="1"/>
                 </imgdir>
             </imgdir>
             <imgdir name="job">
