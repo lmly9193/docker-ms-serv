@@ -15,19 +15,19 @@ function end(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendNextS("What can I do for you? Tru sent me a message saying that you've been training diligently in Victoria Island while helping him with his work. What is it? What? The Black Wings?", 8);
+	qm.sendNextS("我能為你做什麼？什麼？ 黑翼？", 8);
     } else if (status == 1) {
-	qm.sendNextPrevS("#b(You tell her about the Puppeteer and the Black Wings, and about their mission.)#k", 2);
+	qm.sendNextPrevS("#b(你告訴他關於魁儡師和黑翼，以及他們的使命。)#k", 2);
     } else if (status == 2) {
-	qm.sendNextPrevS("I see... I didn''t know there was a group called the Black Wings... They must be fools if they''re trying to revive the Black Mage, knowing how dangerous he is.", 8);
+	qm.sendNextPrevS("我了解了...但我知道有#b黑翼#k這樣的組織...他們不知道復活#r黑魔法師#k是一件多麼危險的事嗎?", 8);
     } else if (status == 3) {
-	qm.sendNextPrevS("That...that''s true...\r\r#b(She''s definitely not afraid to speak her mind.)#k", 2);
+	qm.sendNextPrevS("這...是真的...\r\r#b(看的出來她一點都不害怕)#k", 2);
     } else if (status == 4) {
-	qm.sendNextPrevS("The Book of Prophecy states that the hero will revive and fight against the Black Mage. I wasn''t sure if that was true, but this confirms that the Black Mage is still around.", 8);
+	qm.sendNextPrevS("#b“預言之書”#k指出，英雄們將與黑法師鬥爭 我不知道這是不是真的，但這證實了黑魔法師可能還存在。", 8);
     } else if (status == 5) {
-	qm.sendNextPrevS("Aren't you scared?", 2);
+	qm.sendNextPrevS("你害怕嗎??", 2);
     } else if (status == 6) {
-	qm.sendYesNo("Scared? Pfft. Who cares if the Black Mage appears. You'll be here to protect us. If anything, this makes me want to prepare you for the big battle. Ah, that reminds me, I found a #bskill#k. Would you like to see it?");
+	qm.sendYesNo("害怕!? 噗! 誰在乎#r黑魔法師#k的出現。你已經在這，可以保護我們。哈哈! 如果你有什麼要準備的可以來找我。 啊!我想到一件事，我找到了一個有著#b技能#k符號的捲軸。你想看看嗎?");
     } else if (status == 7) {
 	if (qm.getQuestStatus(21720) == 0) {
 	    qm.forceCompleteQuest();
@@ -35,13 +35,13 @@ function end(mode, type, selection) {
 	    qm.gainExp(3900);
 	}
 	qm.AranTutInstructionalBubble("Effect/BasicEff.img/AranGetSkill");
-	qm.sendNextS('#b(You remembered the Polearm Booster skill!)#k', 2);
+	qm.sendNextS('#b(你想起#r神速之矛#b技能!)#k', 2);
     } else if (status == 8) {
-	qm.sendNextPrevS("This skill was found in an ancient incomprehensible script. I had a hunch it might be a skill you used in the past, and I think I was right. You're not as strong as you used to be, but you'll get there, in time.", 8);
+	qm.sendNextPrevS("我在研究古代卷軸時發現這個技能。我有一個預感，這可能是你過去使用的一種技能，我覺得我是對的。", 8);
     } else if (status == 9) {
-	qm.sendNextPrevS("You are steadily becoming more powerful, and I''ll be here to keep motivating you. You have nothing to be afraid of. You will not lose the battle. You didn''t emerge from ice only to lose to the Black Mage, did you? This time, you''ll finish him, once and for all!", 8);
+	qm.sendNextPrevS("你變得越來越強大，我會繼續幫助你。你沒有什麼可害怕的。你不會失去戰鬥能力。 你是不是輸給#r黑魔法師#k所以才被冰凍？ 別怕!這一次，你一定會打被他直到永遠！", 8);
     } else if (status == 10) {
-	qm.sendPrevS("To do so, there''s only one thing you can do. Train, train, train. Head to Victoria Island and continue training. Let''s make sure you become so powerful that the Black Mage doesn''t stand a chance!", 8);
+	qm.sendPrevS("只要你繼續訓練!你一定會比以前更強，到時候他不會有機會的!!", 8);
     } else if (status == 11) {
 	qm.dispose();
     }
