@@ -3,12 +3,12 @@
 */
 
 function start() {
-    cm.sendYesNo("Wanna ride to Lith Harbor, you stanky ho?");
+    cm.sendYesNo("你想要前往#b維多利亞港#k嗎?");
 }
 
 function action(mode, type, selection) {
     if (mode == 0) {
-	cm.sendOk("FUUUUUU!, COME WITH ME!");
+	cm.sendOk("來吧!跟著我出發!!!!!");
     } else {
 	cm.warp(104000000,0);
     }
