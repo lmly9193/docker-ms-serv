@@ -5,7 +5,7 @@ function start(mode, type, selection) {
 	status++;
     } else {
 	if (status == 0) {
-	    qm.sendNext("#b(You need to think about this for a second...)#k");
+	    qm.sendNext("#b(你需要時間想一下...)#k");
 	    qm.dispose();
 	    return;
 	} else if (status == 2) {
@@ -17,7 +17,7 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendYesNo("#b(Are you certain that you were the hero that wielded the #p1201001#? Yes, you''re sure. You better grab the #p1201001# really tightly. Surely it will react to you.)#k");
+	qm.sendYesNo("#b(你想確定你是否是揮舞著#p1201001#的英雄?哈哈!當然，你當然是... 你最好，好好的緊握住我(#p1201001#)。)#k");
     } else if (status == 1) {
 	if (qm.getJob() == 2000) {
 	    qm.changeJob(2100);
@@ -29,10 +29,10 @@ function start(mode, type, selection) {
 	    qm.expandInventory(4, 4);
 	    qm.gainItem(1142129, 1);
 	    qm.forceCompleteQuest(29924); //medal
-	    qm.sendNextS("#b(I feel like something popping up in my head...)#k", 3);
+	    qm.sendNextS("#b(我好像想起什麼了...)#k", 3);
 	}
     } else if (status == 2) {
-	qm.sendYesNoS("Will you skip the video clip? Even if you skip the scene, game-play will not be affected.", 1);
+	qm.sendYesNoS("你要跳過視頻剪輯嗎？ 即使你跳過場景，遊戲也不會受到影響。", 1);
     } else if (status == 3) {
 	qm.warp(140000000, 0)
 	qm.dispose();
