@@ -5,23 +5,23 @@ function start(mode, type, selection) {
 	status++;
     } else {
 	if (status == 2) {
-	    qm.sendNext("What? I don''t think there are any suspects besides that kid. Please think again.");
+	    qm.sendNext("什麼？ 我不認為那個孩子以外還有嫌犯。 請再想一想。");
 	    qm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	qm.sendNextS("What did #p1032112# say?", 8);
+	qm.sendNextS("你和#p1032112#說話了嗎?", 8);
     } else if (status == 1) {
-	qm.sendNextPrevS("#b(You tell her what #p1032112# observed.)#k", 2);
+	qm.sendNextPrevS("#b(你告訴她#p1032112#所看到的事情。)#k", 2);
     } else if (status == 2) {
-	qm.askAcceptDecline("A kid with a puppet? That seems very suspicious. I am sure that kid is the reason the Green Mushrooms have suddenly turned violent.");
+	qm.askAcceptDecline("一個有木偶的孩子？ 這似乎很可疑，我相信這個孩子是綠色蘑菇突然變得暴力的原因。");
     } else if (status == 3) {
 	qm.forceStartQuest();
-	qm.sendNextS("How dare this kid wreak havoc in the South Forest. Who knows how long it will take to restore the forest... I''ll have to devote most of my time cleaning up the mess.", 2);
+	qm.sendNextS("這個孩子怎麼敢在南方森林裡肆虐。 誰知道恢復森林需要多長時間？我大部分時間必須清理這些混亂。", 2);
     } else if (status == 4) {
-	qm.sendPrevS("#b(You were able to find out what caused the changes in the Green Mushrooms. You should report #p1002104# and deliver the information you''ve collected.)#k", 2);
+	qm.sendPrevS("#b(您已經了解造成綠色蘑菇變化的原因。你應該向#p1002104#報告並且提供您收集的信息。)#k", 2);
     } else if (status == 5) {
 	qm.dispose();
     }
