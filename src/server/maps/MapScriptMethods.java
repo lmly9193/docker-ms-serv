@@ -41,11 +41,11 @@ public class MapScriptMethods {
 
     private static final Point witchTowerPos = new Point(-60, 184);
     private static final String[] mulungEffects = {
-        "æˆ‘ç­‰è‘—ä½ ï¼Œåªè¦ä½ æŒä¹‹ä»¥æ†ï¼Œå¿…èƒ½èµ°å‘æ­£ç¢ºçš„é“è·¯",
-        "ä½•ä¾†çš„å‹‡æ°£æŒ‘æˆ°æ­¦é™µ!",
-        "æˆ‘æœƒè®“ä½ å¾Œæ‚”æŒ‘æˆ°æ­¦é™µé“é¤¨!",
-        "æˆ‘å–œæ­¡ä½ çš„ç›´æ€§æ ¼! ä½†ä¸æ˜¯ä½ çš„é­¯è½è¡å‹•!",
-        "å¦‚æœä½ çœŸçš„é‚£éº¼æƒ³è¦å¤±æ•—çš„è©±ï¼Œå°±ç¹¼çºŒå¾€å‰å§!"};
+        "§Úµ¥µÛ§A¡A¥u­n§A«ù¤§¥H«í¡A¥²¯à¨«¦V¥¿½Tªº¹D¸ô",
+        "¦ó¨Óªº«i®ğ¬D¾ÔªZ³®!",
+        "§Ú·|Åı§A«á®¬¬D¾ÔªZ³®¹DÀ]!",
+        "§Ú³ßÅw§Aªºª½©Ê®æ! ¦ı¤£¬O§Aªº¾|²õ½Ä°Ê!",
+        "¦pªG§A¯uªº¨º»ò·Q­n¥¢±Ñªº¸Ü¡A´NÄ~Äò©¹«e§a!"};
 
     private static enum onFirstUserEnter {
 
@@ -193,12 +193,12 @@ public class MapScriptMethods {
                 break;
             }
             case GhostF: {
-            c.getPlayer().getMap().startMapEffect("é€™å€‹åœ°åœ–æ„Ÿè¦ºé™°æ£®æ£®çš„..æœ‰ç¨®è«åçš„å¥‡æ€ªæ„Ÿè¦º..", 5120025);  
+            c.getPlayer().getMap().startMapEffect("³o­Ó¦a¹Ï·PÄ±³±´Ë´Ëªº..¦³ºØ²ö¦Wªº©_©Ç·PÄ±..", 5120025);  
             break;
             }
             //5120018 = ludi(none), 5120019 = orbis(start_itemTake - onUser)
             case moonrabbit_mapEnter: {
-                c.getPlayer().getMap().startMapEffect("ç²¥ç’°ç¹æœˆçƒçš„æœˆè¦‹è‰ç¨®å­å’Œä¿è­·æœˆçƒå…”å­ï¼", 5120016);
+                c.getPlayer().getMap().startMapEffect("µ°ÀôÂ¶¤ë²yªº¤ë¨£¯óºØ¤l©M«OÅ@¤ë²y¨ß¤l¡I", 5120016);
                 break;
             }
             /*            case StageMsg_together: {
@@ -277,25 +277,25 @@ public class MapScriptMethods {
             case party6weatherMsg: {
                 switch (c.getPlayer().getMapId()) {
                     case 930000000:
-                        c.getPlayer().getMap().startMapEffect("é€²å…¥å‚³é€é»ï¼Œæˆ‘è¦å°ä½ å€‘æ–½æ”¾è®Šèº«é­”æ³•äº†ï¼", 5120023);
+                        c.getPlayer().getMap().startMapEffect("¶i¤J¶Ç°eÂI¡A§Ú­n¹ï§A­Ì¬I©ñÅÜ¨­Å]ªk¤F¡I", 5120023);
                         break;
                     case 930000100:
-                        c.getPlayer().getMap().startMapEffect("æ¶ˆæ»…æ‰€æœ‰æ€ªç‰©ï¼", 5120023);
+                        c.getPlayer().getMap().startMapEffect("®ø·À©Ò¦³©Çª«¡I", 5120023);
                         break;
                     case 930000200:
-                        c.getPlayer().getMap().startMapEffect("å°èŠæ£˜æ–½æ”¾ç¨€é‡‹çš„æ¯’æ¶²4å€‹ï¼", 5120023);
+                        c.getPlayer().getMap().startMapEffect("¹ï¯ğ´Æ¬I©ñµ}ÄÀªº¬r²G4­Ó¡I", 5120023);
                         break;
                     case 930000300:
-                        c.getPlayer().getMap().startMapEffect("æˆ‘è¿·è·¯äº†...", 5120023);
+                        c.getPlayer().getMap().startMapEffect("§Ú°g¸ô¤F...", 5120023);
                         break;
                     case 930000400:
-                        c.getPlayer().getMap().startMapEffect("æ‹¿æ·¨åŒ–ä¹‹ç å¾Œæ‹¿10å€‹æ€ªç‰©æ ªçµ¦æˆ‘ï¼", 5120023);
+                        c.getPlayer().getMap().startMapEffect("®³²b¤Æ¤§¯]«á®³10­Ó©Çª«®èµ¹§Ú¡I", 5120023);
                         break;
                     case 930000500:
-                        c.getPlayer().getMap().startMapEffect("å¾æ€ªäººæ›¸æ¡Œä¸­å°‹æ‰¾ç´«è‰²é­”åŠ›çŸ³ï¼", 5120023);
+                        c.getPlayer().getMap().startMapEffect("±q©Ç¤H®Ñ®à¤¤´M§äµµ¦âÅ]¤O¥Û¡I", 5120023);
                         break;
                     case 930000600:
-                        c.getPlayer().getMap().startMapEffect("å°‡ç´«è‰²é­”åŠ›çŸ³æ”¾åœ¨ç¥­å£‡ä¸Šï¼", 5120023);
+                        c.getPlayer().getMap().startMapEffect("±Nµµ¦âÅ]¤O¥Û©ñ¦b²½¾Â¤W¡I", 5120023);
                         break;
                 }
                 break;
@@ -460,8 +460,8 @@ public class MapScriptMethods {
                 break;
             }
             default: {
-                System.out.println("æœªè™•ç†çš„è…³æœ¬ : " + scriptName + ", å‹æ…‹ : onUserEnter - åœ°åœ–ID " + c.getPlayer().getMapId());
-                FileoutputUtil.log(FileoutputUtil.ScriptEx_Log, "æœªè™•ç†çš„è…³æœ¬ : " + scriptName + ", å‹æ…‹ : onUserEnter - åœ°åœ–ID " + c.getPlayer().getMapId());
+                System.out.println("¥¼³B²zªº¸}¥» : " + scriptName + ", «¬ºA : onUserEnter - ¦a¹ÏID " + c.getPlayer().getMapId());
+                FileoutputUtil.log(FileoutputUtil.ScriptEx_Log, "¥¼³B²zªº¸}¥» : " + scriptName + ", «¬ºA : onUserEnter - ¦a¹ÏID " + c.getPlayer().getMapId());
                 break;
             }
         }
@@ -534,7 +534,7 @@ public class MapScriptMethods {
             case evanTogether:
             case aranTutorAlone:
             case Ghost: {
-            c.getPlayer().getMap().startMapEffect("é€™è£¡æ„Ÿè¦ºæ€ªé™°æ£®çš„...", 5120025);
+            c.getPlayer().getMap().startMapEffect("³o¸Ì·PÄ±©Ç³±´Ëªº...", 5120025);
             break;
             }
             case evanAlone: { //no idea
@@ -665,9 +665,9 @@ public class MapScriptMethods {
                         number++;
                         c.getPlayer().updateInfoQuest(m.questid - 2005, sb.toString());
                         MapleQuest.getInstance(m.questid - 1995).forceStart(c.getPlayer(), 0, String.valueOf(number));
-                        c.getPlayer().dropMessage(-1, "è¨ªå• " + number + "/" + m.maps.length + " å€‹åœ°å€.");
-                        c.getPlayer().dropMessage(-1, "ç¨±è™Ÿ " + String.valueOf(m) + " å·²å®Œæˆäº†");
-                        c.getSession().write(MaplePacketCreator.showQuestMsg("ç¨±è™Ÿ " + String.valueOf(m) + " å·²å®Œæˆè¨ªå• " + number + "/" + m.maps.length + " å€‹åœ°å€"));
+                        c.getPlayer().dropMessage(-1, "³X°İ " + number + "/" + m.maps.length + " ­Ó¦a°Ï.");
+                        c.getPlayer().dropMessage(-1, "ºÙ¸¹ " + String.valueOf(m) + " ¤w§¹¦¨¤F");
+                        c.getSession().write(MaplePacketCreator.showQuestMsg("ºÙ¸¹ " + String.valueOf(m) + " ¤w§¹¦¨³X°İ " + number + "/" + m.maps.length + " ­Ó¦a°Ï"));
                     }
                 }
                 break;
@@ -748,11 +748,11 @@ public class MapScriptMethods {
                 break;
             }
             case iceCave: {
-                c.getPlayer().changeSkillLevel(SkillFactory.getSkill(20000014), (byte) -1, (byte) 0);
-                c.getPlayer().changeSkillLevel(SkillFactory.getSkill(20000015), (byte) -1, (byte) 0);
-                c.getPlayer().changeSkillLevel(SkillFactory.getSkill(20000016), (byte) -1, (byte) 0);
-                c.getPlayer().changeSkillLevel(SkillFactory.getSkill(20000017), (byte) -1, (byte) 0);
-                c.getPlayer().changeSkillLevel(SkillFactory.getSkill(20000018), (byte) -1, (byte) 0);
+                c.getPlayer().clearSkill(20000014);
+                c.getPlayer().clearSkill(20000015);
+                c.getPlayer().clearSkill(20000016);
+                c.getPlayer().clearSkill(20000017);
+                c.getPlayer().clearSkill(20000018);
                 c.getSession().write(UIPacket.ShowWZEffect("Effect/Direction1.img/aranTutorial/ClickLirin"));
                 c.getSession().write(UIPacket.IntroDisableUI(false));
                 c.getSession().write(UIPacket.IntroLock(false));
@@ -797,8 +797,8 @@ public class MapScriptMethods {
                 break;
             }
             default: {
-                System.out.println("æœªè™•ç†çš„è…³æœ¬ : " + scriptName + ", å‹æ…‹ : onUserEnter - åœ°åœ–ID " + c.getPlayer().getMapId());
-                FileoutputUtil.log(FileoutputUtil.ScriptEx_Log, "æœªè™•ç†çš„è…³æœ¬ : " + scriptName + ", å‹æ…‹ : onUserEnter - åœ°åœ–ID " + c.getPlayer().getMapId());
+                System.out.println("¥¼³B²zªº¸}¥» : " + scriptName + ", «¬ºA : onUserEnter - ¦a¹ÏID " + c.getPlayer().getMapId());
+                FileoutputUtil.log(FileoutputUtil.ScriptEx_Log, "¥¼³B²zªº¸}¥» : " + scriptName + ", «¬ºA : onUserEnter - ¦a¹ÏID " + c.getPlayer().getMapId());
                 break;
             }
         }
