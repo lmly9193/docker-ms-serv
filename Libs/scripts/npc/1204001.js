@@ -12,9 +12,9 @@ function action(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	cm.sendNextS("I'm Francis, the Puppeteer of the Black Wings. How dare you disturb my puppets... It really upsets me, but I''ll let it slide this time. If I catch you doing it again though, I swear in the name of the Black Mage, I will make you pay for it.", 9);
+	cm.sendNextS("我是浦藍西斯，黑翼的木偶師。你怎麼敢破壞我的木偶...真的讓我煩惱，但我會讓它恢復。 如果再讓我抓你破壞它，我以黑魔法師的名義發誓，我會讓你付出很大的代價。", 9);
     } else if (status == 1) {
-	cm.sendNextPrevS("#b(The Black Wings? Huh? Who are they? And how is all this related to the Black Mage? Hm, maybe you should report this info to Tru.)#k", 3);
+	cm.sendNextPrevS("#b(黑翼? 嗯? 這是哪裡? 所以這一切與黑魔法師有關？嗯~也許該向#b特魯#k報告了)#k", 3);
     } else if (status == 2) {
 	cm.forceStartQuest(21760, "0");
 	cm.warp(105070300, 3);
