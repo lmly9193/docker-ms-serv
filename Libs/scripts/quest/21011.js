@@ -21,22 +21,22 @@ function end(mode, type, selection) {
 	    qm.dispose();
 	    return;
 	}
-	qm.sendNext("Wait, are you... No way... Are you the hero that #p1201000# has been talking about all this time?! #p1201000#! Don''t just nod... Tell me! Is this the hero you''ve been waiting for?!");
+	qm.sendNext("等等，你是...不可能...你是#b莉琳#k一直在說的那位英雄#b(狂狼勇士)#k嗎?#b莉琳#k!不要只會點頭...親口告訴我!這是妳一直以來等待的那位英雄嗎?");
     } else if (status == 1) {
-	qm.sendNextPrev("   #i4001171#");
+	qm.sendNextPrev("#i4001171#");
     } else if (status == 2) {
-	qm.sendNextPrev("I''m sorry. I''m just so overcome with emotions... *Sniff sniff* My goodness, I''m starting to tear up. You must be so happy, #p1201000#.");
+	qm.sendNextPrev("我...我很抱歉。我只是在壓抑我的情緒...(聞了一下)我的天!!妳一定很開心，#b莉琳#k。");
     } else if (status == 3) {
-	qm.sendNextPrev("Wait a minute... You''re not carrying any weapons. From what I''ve heard, each of the heroes had a special weapon. Oh, you must have lost it during the battle against the Black Mage.");
+	qm.sendNextPrev("等等...你沒攜帶武器。我記得每位英雄都有他專屬的武器。哦，你一定是在戰鬥中失去了...");
     } else if (status == 4) {
-	qm.sendYesNo("This isn''t good enough to replace your weapon, but #bcarry this sword with you for now#k. It''s my gift to you. A hero can''t be walking around empty-handed. \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#i1302000# 1 #t1302000# \r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 35 exp");
+	qm.sendYesNo("這不足以和你的武器相比，但#b現在攜帶這把劍#k。這是我給你的禮物，不要嫌棄它。 \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#i1302000# 1 #t1302000# \r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 35 exp");
     } else if (status == 5) {
 	if (qm.getQuestStatus(21011) == 1) {
 	    qm.gainItem(1302000, 1);
 	    qm.gainExp(35);
 	}
 	qm.forceCompleteQuest();
-	qm.sendNextPrevS("#b(Your skills are nowhere close to being hero-like... But a sword? Have you ever even held a sword in your lifetime? You can''t remember... How do you even equip it?)#k", 3);
+	qm.sendNextPrevS("#b(你還記得如何使用嗎?哦，你忘了...)#k", 3);
     } else if (status == 6) {
 	qm.summonMsg(16); // How to equip shiet
 	qm.dispose();
