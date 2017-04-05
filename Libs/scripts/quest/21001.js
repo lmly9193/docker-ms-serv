@@ -52,11 +52,11 @@ function end(mode, type, selection) {
     } else if (status == 3) {
 	qm.sendNextPrev("是的是的，我們沒有太多時間。我可以感覺到#r黑巫師#k的力量越來越大，我有一種不好的預感，感覺#r黑巫師#k已經快找到方舟了!如果我們現在不離開，那就慘了!");
     } else if (status == 4) {
-	qm.sendNextPrevS("Leave now!", 3);
+	qm.sendNextPrevS("現在就離開!", 3);
     } else if (status == 5) {
 	qm.sendNextPrev("#b亞蘭(狂狼勇士)#k!立刻上船!我知道你鄉幫助你的夥伴和他們一起奮戰，但一切都太晚了!讓你的朋友好好對付#b黑巫師#k...你現在應該上船，逃到維多利亞島!");
     } else if (status == 6) {
-	qm.sendNextPrevS("No, I can't do that!", 3);
+	qm.sendNextPrevS("不，我不能這麼做!", 3);
     } else if (status == 7) {
 	qm.sendNextPrevS("#b赫莉娜．皮爾斯#k，妳好好照顧他們，並前往維多利亞島。我答應妳，我不會死!我很快就會在那見到妳。我必須幫助我的夥伴，一起並肩作戰且永遠與#r黑巫師#k戰鬥!", 3);
     } else if (status == 8) {
