@@ -5,14 +5,14 @@ function start(mode, type, selection) {
 	status++;
     } else {
 	if (status == 0) {
-	    qm.sendNext("Are you not ready to hunt the #o0100132#s yet? Always proceed if and only if you are fully ready. There''s nothing worse than engaging in battles without sufficient preparation.");
+	    qm.sendNext("你還沒準備好去追捕#o0100132#嗎? 好吧等你完全準備好時再去吧。但時間不等人...");
 	    qm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("Shall we continue with your Basic Training? Before accepting, please make sure you have properly equipped your sword and your skills and potions are readily accessible.");
+	qm.askAcceptDecline("是否繼續進行基礎訊練？ 在接受之前，請確保你已經妥善裝備了你的武器、技能和藥水");
     } else if (status == 1) {
 	qm.forceStartQuest();
 	qm.AranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow3");
