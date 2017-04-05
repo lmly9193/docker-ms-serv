@@ -12,9 +12,9 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendNextS("看來你現在已經熱身完了。 這是嚴格的訓練是可以幫助你建立堅實的基礎。 我們繼續進行，走吧？", 8);
+	qm.sendNextS("看來你現在已經熱身完了。 這嚴格的訓練是可以幫助你建立堅實的基礎。 我們繼續進行，走吧？", 8);
     } else if (status == 1) {
-	qm.sendNextPrevS("是時候去擊敗一些#r#o0100133##k在#b#m140020200##k。我相信#r20#k之應該難不倒你。去吧然後... 嗯?  你有什麼想說的嗎?", 8);
+	qm.sendNextPrevS("是時候去擊敗一些#r#o0100133##k在#b#m140020200##k。我相信#r20#k隻應該難不倒你。去吧然後... 嗯?  你有什麼想說的嗎?", 8);
     } else if (status == 2) {
 	qm.sendNextPrevS("怎麼越打越多隻?", 2);
     } else if (status == 3) {
