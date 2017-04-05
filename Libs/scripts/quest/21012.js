@@ -5,23 +5,23 @@ function start(mode, type, selection) {
 	status++;
     } else {
 	if (status == 2) {
-	    qm.sendNext("Hm... You don''t think that would help? Think about it. It could help, you know...");
+	    qm.sendNext("嗯，你不覺得會有幫助嗎？ 想想看，它應該可以幫助，你知道...");
 	    qm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	qm.sendNext("Welcome hero! What's that? You want to know how I knew who you were? That's easy. I eavesdropped on some people talking loudly next to me. I''m sure the rumor has spread through the entire island already. Everyone knows that you've returned!");
+	qm.sendNext("歡迎回來英雄!什麼?你想知道我為什麼知道你來了?哈哈，我有偷偷聽到你的事情。我相信，這件事已經傳騙了整個#b瑞恩#k島嶼了。大家都知道你已經回來啦!!");
     } else if (status == 1) {
-	qm.sendNextPrev("Anyway, what's with the long face? Is something wrong? Hm? You''re not sure whether you''re really a hero or not? You lost your memory?! No way... It must be because you were trapped inside the ice for hundreds and hundreds of years.");
+	qm.sendNextPrev("怎麼?你為什麼拉長著臉?有問題嗎?恩?你不知道你是否是真的英雄?哦~你失去你的記憶了?沒辦法...一定是被困在冰裡太久了，腦袋都被凍壞了...");
     } else if (status == 2) {
-	qm.askAcceptDecline("Hm, how about you trying out that sword? Wouldn't that bring back some memories? How about #bfighting some monsters#k?");
+	qm.askAcceptDecline("嗯...你有試著拿那把劍嗎?沒事發生?好吧!還記的如何在戰鬥中使用武器攻擊嗎?你可以去獵殺一些怪物回來嗎?");
     } else if (status == 3) {
 	qm.forceStartQuest();
-	qm.sendNext("It just so happens that there are a lot of #r#o9300383#s#k near here. How about defeating just #r3#k of them? It could help you remember a thing or two.");
+	qm.sendNext("在這附近有很多 #r#o9300383##k. 你可以去獵殺#r3#k隻? 搞不可以幫助你想起幾件事...");
     } else if (status == 4) {
-	qm.sendNextPrevS("Ah, you''ve also forgotten how to use your skills? #bPlace skills in the quick slots for easy access.#k You can also place consumable items in the slots, so use the slots to your advantage.", 1);
+	qm.sendNextPrevS("阿，你也忘記如何使用技能?#b你可以把技能#r(K)#b放到快捷鍵上，可以更方便的使用技能，當然你的消耗品#r(I)#b也可以放在快捷鍵中，方便使用#k。", 1);
     } else if (status == 5) {
 	qm.summonMsg(17);
 	qm.dispose();
@@ -33,20 +33,20 @@ function end(mode, type, selection) {
 	status++;
     } else {
 	if (status == 0) {
-	    qm.sendNext("What? You don't want the potion?");
+	    qm.sendNext("什麼?你不想要?");
 	    qm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	qm.sendYesNo("Hm... Your expression tells me that the exercise didn''t jog any memories. But don''t you worry. They''ll come back, eventually. Here, drink this potion and power up! \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#i2000022# 10 #t2000022# \r\n#i2000023# 10 #t2000023# \r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 57 exp");
+	qm.sendYesNo("嗯...你的表情告訴我，這項任務沒有回想起任何事。 但不要擔心最後一定會想起來的！ \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#i2000022# 10 #t2000022# \r\n#i2000023# 10 #t2000023# \r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 57 exp");
     } else if (status == 1) {
 	qm.gainItem(2000022, 10);
 	qm.gainItem(2000023, 10);
 	qm.gainExp(57);
 	qm.forceCompleteQuest();
-	qm.sendOkS("#b(Even if you''re really the hero everyone says you are... What good are you without any skills?)#k", 2);
+	qm.sendOkS("#b(即使你是真的英雄，但大家都說目前沒能力有什麼用...)#k", 2);
 	qm.dispose();
     }
 }
