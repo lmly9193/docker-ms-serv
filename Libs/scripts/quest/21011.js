@@ -36,7 +36,7 @@ function end(mode, type, selection) {
 	    qm.gainExp(35);
 	}
 	qm.forceCompleteQuest();
-	qm.sendNextPrevS("#b(你還記得如何使用嗎?哦，你忘了...)#k", 3);
+	qm.sendNextPrevS("#b(劍?武器?這要如何使用...)#k", 3);
     } else if (status == 6) {
 	qm.summonMsg(16); // How to equip shiet
 	qm.dispose();
