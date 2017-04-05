@@ -5,17 +5,17 @@ function start(mode, type, selection) {
 	status++;
     } else {
 	if (status == 0) {
-	    qm.sendNext("It's really urgent, and you'll regret it if you refuse to. #bIt has something to do with your pole arm,#k which means it has to do with your past. Who knows...? Maybe the pole arm is key to reawakening your abilities...?");
+	    qm.sendNext("真的很緊急，不能拒絕，不然你會後悔...。你與你的#b戰矛#k有關，意味著他可知道你的過去。誰知道...?搞不好他是你喚醒你能力的關鍵...?");
 	    qm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("How's the training going? Wow, looking at you, I can tell your levels have shot through the roof. That's amazing... well, anyway, I see that you'r busy, but you'll have to return to the island for a bit.");
+	qm.askAcceptDecline("訓練進行的如何？ 哇，看著你，我可以告訴你的實力已經更高了。 那真是太棒了，不管怎樣，我知道你很忙，但是你務必回到島上。");
     } else if (status == 1) {
 	qm.forceStartQuest(21200); //??
-	qm.sendOk("Your #bGiant Pole Arm#k that's being kept in #bRien#k is acting strange all of a sudden. According to the book, the pole arm reacts like this when it's calling for its master. #bMaybe it's calling for you?#k? Please come back to the island and find out.");
+	qm.sendOk("你的#b矛壁#k 一直保持在#b瑞嗯#k但他出奇怪的反應。根據書上，當他需要主人時就會有反應。");
 	qm.dispose();
     }
 }
@@ -25,7 +25,7 @@ function end(mode, type, selection) {
 	status++;
     } else {
 	if (status == 11) {
-	    qm.sendNext("Hey, at least you tell me you tried!");
+	    qm.sendNext("嘿，至少你告訴我你試過了！");
 	    qm.dispose();
 	    return;
 	} else if (status == 13) {
@@ -37,34 +37,34 @@ function end(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendNextS("Hmmmmmm mmmm mmmmm....", 2);
+	qm.sendNextS("嗚...... ... ...嗚嗯......", 2);
     } else if (status == 1) {
-	qm.sendNextPrevS("#b(Giant Pole Arm is buzzing, but who's that boy standing there?)#k", 2);
+	qm.sendNextPrevS("#b(巨矛嗡嗡作響，突然有個男孩站在那裡?)#k", 2);
     } else if (status == 2) {
-	qm.sendNextPrevS("#b(I've never met him before. He doesn't look human.)#k", 2);
+	qm.sendNextPrevS("#b(我從未看過他，他是誰?他看起來一點也不像人類...)#k", 2);
     } else if (status == 3) {
-	qm.sendNextPrev("Hey Aran! Do you still not hear me? Seriously, can't you hear me? Ahhh, this is frustrating!");
+	qm.sendNextPrev("啊! 亞蘭! 你有聽到我說話嗎? 沒聽見嗎? 啊~! 氣死人了!");
     } else if (status == 4) {
-	qm.sendNextPrevS("#b(Whoa, who was that? Sounds like an angry boy...)#k", 2);
+	qm.sendNextPrevS("#b(咦?這是誰的聲音，聽起來像兇惡的少年...)#k", 2);
     } else if (status == 5) {
-	qm.sendNextPrev("Seriously, the one master I had turned out to be trapped in ice for hundreds of years, abandoning the weapon, and now the 'master' can't even hear me?");
+	qm.sendNextPrev("哎呀...沒想到主人醒來後，就把武器丟著不管，現在也聽不到我...?");
     } else if (status == 6) {
-	qm.sendNextPrevS("Who are you?", 2);
+	qm.sendNextPrevS("你是誰?", 2);
     } else if (status == 7) {
-	qm.sendNextPrev("Aran? Do you hear me now? It's me, it's me! I'm your weapon #bMaha the pole arm!#k!");
+	qm.sendNextPrev("亞蘭? 你聽的道我說話了? 是我啊!你的武器#b矛 瑪哈!#k!");
     } else if (status == 8) {
-	qm.sendNextPrevS("#b(...Maha? Giant pole Arm actually talks?)#k", 2);
+	qm.sendNextPrevS("#b(...瑪哈?巨大的矛會說話嗎?)#k", 2);
     } else if (status == 9) {
-	qm.sendNextPrev("Why do you have that look on your face like you can't believe it? I see that you have lost all your memories, but... did you also forget about me? How can you do that to me??");
+	qm.sendNextPrev("什麼嗎?真不敢相信，忘的也太徹底了吧?怎麼會有這種事啊?");
     } else if (status == 10) {
-	qm.sendNextPrevS("I'm sorry, but seriously... I don't remember a thing.", 2);
+	qm.sendNextPrevS("我很抱歉...我真的什麼都不記得了...", 2);
     } else if (status == 11) {
-	qm.sendYesNo("Is that all you can say after all those years? I'm sorry? Do you understand how bored I was all by myself for hundreds of years? Bring it out if you can. Bring your memories out! Bring them all out! Dig them up if you need to!");
+	qm.sendYesNo("你以為對不起就可以了嗎!? 你知道這幾百年來我很孤獨嗎...?不管怎樣你一定要給我想起來!!");
     } else if (status == 12) {
-	qm.sendNextS("#b(The voice that claims to be Maha the Giant Pole Arm seem quite perturbed. This conversation is going nowhere. I better talk to Lirin first.)#k", 2);
+	qm.sendNextS("#b(自己說是巨大的矛 瑪哈...真奇怪... 不管了，先去找莉琳。)#k", 2);
 	qm.forceCompleteQuest();
     } else if (status == 13) {
-	qm.sendYesNo("Would you like to skip the video clip?  Even if you skip the scene, game play will not be affected.");
+	qm.sendYesNo("你要跳過動畫嗎?");
     } else if (status == 14) {
 	qm.dispose();
     }
