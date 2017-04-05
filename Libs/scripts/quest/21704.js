@@ -11,11 +11,11 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.sendNextS("How did the training go? The Penguin Teacher #p1202006# likes to exaggerate and it worried me knowing that he has bouts of Alzheimer's, but I'm sure he helped you. He's been studying the skills of heroes for a very long time.", 8);
+	qm.sendNextS("和導師訓練得如何?我相你他有幫助到你。", 8);
     } else if (status == 1) {
-	qm.sendNextPrevS("#b(You tell her that you were able to remember the Combo Ability skill.)#k", 2);
+	qm.sendNextPrevS("#b(你告訴她，你想起了一項技能。)#k", 2);
     } else if (status == 2) {
-	qm.askAcceptDecline("That's great! Honestly, though, I think it has less to do with the method of #p1202006#'s training and more to do with your body remembering its old abilities. #bI'm sure your body will remember more skills as you continue to train#k!  \r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 500 exp");
+	qm.askAcceptDecline("那很棒！但老實說，我認為這與#p1202006#的訓練方法沒有什麼關係，有關係的是你喚醒你身體的記憶。#b我相信，當你繼續訓練時，你的身體會喚醒更多的技能#k!  \r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 500 exp");
     } else if (status == 3) {
 	qm.forceCompleteQuest();
 	qm.gainExp(500);
