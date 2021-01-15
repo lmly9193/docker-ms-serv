@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  maplestory:
+    container_name: 'GameServer'
+    image: openjdk:8-jdk-alpine
+    command: ./serv.sh
+    environment:
+      - TZ=Asia/Taipei
+    ports:
+      - "8484:8484"
+      - "8571-8590:8571-8590"
+      - "8596:8596"
+    volumes:
+      - ./:/maplestory
+    working_dir: /maplestory
